@@ -1,0 +1,20 @@
+[
+  {
+    "id": "attack_aoe",
+    "name": "Attack Page – AoE Focus",
+    "tags": ["attack", "aoe", "ranged_friendly"],
+    "description": "Boosts follower AoE damage, good when you play at range."
+  },
+  {
+    "id": "attack_single",
+    "name": "Attack Page – Single Target",
+    "tags": ["attack", "single_target"],
+    "description": "Boosts single target damage."
+  },
+  {
+    "id": "tank_defense",
+    "name": "Tank Page – Defensive",
+    "tags": ["tank", "mitigation"],
+    "description": "Improves pet survivability."
+  }
+]

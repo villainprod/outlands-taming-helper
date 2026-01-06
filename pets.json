@@ -1,0 +1,6 @@
+[
+  { "id": "shadow_stalker", "name": "Shadow Stalker", "role": "Attack", "tags": ["single_target", "bleed"] },
+  { "id": "vampire_bat", "name": "Vampire Bat", "role": "Attack", "tags": ["single_target", "lifesteal"] },
+  { "id": "warpig", "name": "Warpig", "role": "Attack", "tags": ["aoe", "cleave"] },
+  { "id": "gravebug", "name": "Gravebug", "role": "Tank", "tags": ["tank", "aoe"] }
+]

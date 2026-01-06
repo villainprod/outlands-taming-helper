@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Outlands Taming Helper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Outlands Taming Helper</h1>
+    <p>Select 1–5 pets and a playstyle to get team and Bestiary suggestions.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Team Setup</h2>
+
+      <label for="pet-select">Choose pets (1–5):</label>
+      <select id="pet-select">
+        <!-- populated by JS -->
+      </select>
+      <button id="add-pet-btn">Add Pet</button>
+
+      <div id="selected-pets" class="pill-container"></div>
+
+      <label for="playstyle">Playstyle:</label>
+      <select id="playstyle">
+        <option value="general">General PvM</option>
+        <option value="aoe_far">AoE farm – standing 5+ tiles away</option>
+        <option value="single_target">Single target / boss</option>
+      </select>
+
+      <button id="run-btn" class="primary">Recommend Team & Bestiary</button>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Minimal demo – plug in your real Outlands data & rules.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
