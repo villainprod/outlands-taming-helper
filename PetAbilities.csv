@@ -1,0 +1,96 @@
+Ability,Type,Description
+Air Breath,Cooldown,"Fires a projectile at a target up to 12 tiles away, dealing (DamageMax * 1.5) damage and applying a weaken effect of (Control Slots * 4%) for 15 seconds."
+Air Shield,Cooldown,Creates a shield around the creature that increases accuracy and melee defense by 15% for 60 seconds (cannot stack).
+Backstab,Innate,"If stealthed, creature's next melee attack gains +25% accuracy and deals +150% damage."
+Bad Luck,Passive,"Has a 15% chance when taking damage to inflict that damage (ignoring armor) also onto the attacker, with damage amount capped at (DamageMax * 1.0)."
+Barb Swarm,Cooldown,"Fires projectiles at a location up to 12 tiles away hitting up to 4 targets within 2 tiles. Inflicts (DamageMax * 1.0) bleed damage over for 15 seconds, with the first target hit taking +50% damage."
+Bleed,Passive,Has a 15% chance on melee attack to inflict (DamageMax * 1.0) bleed damage over 15 seconds.
+Blood Barrage,Innate,Create makes its normal melee attacks as ranged attacks up to 12 tiles away. Hits have a 15% chance to inflict Bleed ability on target.
+Blood Breath,Cooldown,"Fires a projectile at a target up to 12 tiles away, inflicting (DamageMax * 1.0) bleed damage over 15 seconds."
+Blood Expertise,Cooldown,Consumes up to 10 blood within 6 tiles to increase accuracy by (10% + (Blood Consumed * 0.75%)) for 30 seconds (cannot stack).
+Blood Frenzy,Cooldown,Consumes up to 10 blood within 6 tiles to increase melee attack speed by (7.5% + (Blood Consumed * 0.5%)) for 30 seconds (cannot stack).
+Blood Healing,Cooldown,"If below 66% hit points, will consume up to 10 blood within 6 tiles to restore (5% + (Blood Consumed * 0.5%)) of maximum health."
+Blood Rage,Cooldown,Consumes up to 10 blood within 6 tiles to increase melee damage by (15% + (Blood Consumed * 1%)) for 30 seconds (cannot stack).
+Blood Shield,Cooldown,Consumes up to 10 blood within 6 tiles to increase magic resist by (60 + (Blood Consumed * 4)) for 30 seconds (cannot stack).
+Bog Barrage,Cooldown,"Fires 3 waves of projectiles in a 8 tile radius, with each wave hitting up to 6 targets. Each hit inflicts (DamageMax * 0.33) damage and has a 10% chance to inflict (DamageMax * 0.25) disease damage every 5 seconds for 20 seconds."
+Burrow,Cooldown,Has a 15% chance on melee attack to inflict (DamageMax * 2.0) bleed damage over 15 seconds.
+Charge,Cooldown,"Teleports to a location up to 12 tiles away, hitting up to 3 targets within 1 tile. Inflicts (DamageMax * 0.8) damage, with the first target hit taking +50% damage."
+Chill Touch,Passive,Has a 15% chance on melee attack to inflict (DamageMax * 0.9) damage and apply a chill effect of (Control Slots * 2%) for the next 60 seconds (stacks up to 25%).
+Chilled Charge,Cooldown,"Teleports to a location up to 12 tiles away, hitting up to 3 targets within 1 tile. Inflicts (DamageMax * 0.7) damage, with the first target hit taking +50% damage. Applies a chill effect of (Control Slots * 2%) for the next 60 seconds (stacks up to 25%)."
+Cleave,Innate,Successful melee attacks inflict an additional (DamageMax * 0.4) to a random target within 1 tile.
+Concussion Breath,Cooldown,"Fires a projectile at a target up to 12 tiles away, inflicting (DamageMax * 1.75) damage that ignores half of target's armor. Damage is increased by 50% if tamer has a barding effect active on the target."
+Corpse Barrage,Innate,Creature makes its normal melee attacks as ranged attacks up to 12 tiles away. Hits have a 15% chance to inflict (DamageMax * 0.5) disease damage every 5 seconds for 20 seconds.
+Corruption Blast,Cooldown,"Fires a projectile at a location up to 6 tiles away, hitting up to 3 targets within 1 tile. Inflicts (DamageMax * 0.33) disease damage every 5 seconds for 20 seconds, with the first target hit taking +33% damage."
+Crush,Cooldown,"Has a 15% chance on melee attack apply a pierce effect of (10 * Control Slots) for 15 seconds. If successful, has a (10% * Control Slot) chance to Hinder creatures for 3 seconds or Hamstring players for 2 seconds."
+Darkstrike,Cooldown,"Detonates a location 1 tile away, hitting up to 3 targets within 3 tiles. Inflicts (DamageMax * 0.25) damage that ignores half of target's armor and also inflicts (DamageMax * 0.33) disease damage every 5 seconds over 20 seconds. The first target hit also takes +33% normal and disease damage."
+Devour,Cooldown,Can consume nearby corpses to heal 15% of maximum health.
+Dig,Cooldown,"Teleports to a location up to 12 tiles away, hitting up to 3 targets within 2 tiles. Inflicts (DamageMax * 0.75) damage, with the first target hit taking +50% damage."
+Discharge,Cooldown,Melee attacks have a 10% chance to restore 5% Health and to inflict an additional (DamageMax * 1.5) damage which ignores armor.
+Disease,Passive,Has a 15% chance on melee attack to inflict (DamageMax * 0.5) disease damage every 5 seconds for 20 seconds.
+Diversion,Innate,Creature has reduced Aggro.
+Dreamlull,Passive,Has a 15% chance on spellcast to apply a hex effect of (Control Slots * 25) for 15 seconds. Will also hinder creatures for (Control Slots * 1) seconds or hamstring players for 2 seconds.
+Drowned Barrage,Cooldown,"Fires projectiles in a 6 tile radius, hitting up to to 5 targets. Inflicts (DamageMax * 0.75) damage, with the first target hit taking +50% damage. Applies a cripple effect of (Control Slots * 2%) and pierce effect of (Control Slots * 5) for 15 seconds."
+Earth Breath,Cooldown,"Fires a projectile at a target up to 12 tiles away, inflicting (DamageMax * 1.75) damage."
+Earth Seeds,Passive,Has a 15% chance on spellcast to inflict (DamageMax * 1.0) bleed damage over 15 seconds.
+Earth Shield,Cooldown,Creates a shield around the creature that increases melee damage by 15% and armor by 30 for 60 seconds (cannot stack).
+Eldritch Breath,Cooldown,"Fires a projectile at a target up to 12 tiles away, inflicting (DamageMax * 1.5) damage and applying a hex effect of (Control Slots * 15) for 15 seconds."
+Eldritch Shield,Cooldown,Creates a shield around the creature that increases spell damage by 15% and magic resist by 60 for 60 seconds (cannot be stacked).
+Elusive Form,Innate,Creature has an innate 25 parry skill against melee attacks.
+Enrage,Passive,Has a 15% chance on melee attack to increase melee damage by 20% for 30 seconds (cannot stack).
+Epic Barrage,Cooldown,"Fires projectiles at a target up to 12 tiles away, dealing 3 hits that each inflict (DamageMax * 0.5) damage that ignores armor."
+Eversion,Passive,"Has a 15% chance on successful melee attack to lose 3% of its own health, but will inflict (DamageMax * 0.75) disease damage every 5 seconds for 20 seconds."
+Fiery Charge,Cooldown,"Teleports to a location up to 12 tiles away, hitting up to 3 targets within 3 tiles. Inflicts (DamageMax * 0.9) damage, with the first target hit taking +50% damage."
+Fiery Dig,Cooldown,"Teleports to a location up to 12 tiles away, hitting up to 3 targets within 2 tiles. Inflicts (DamageMax * 0.9) damage against, with the first target hit taking +50% damage."
+Fire Barrage,Innate,Creature makes its normal melee attacks as ranged attacks up to 12 tiles away.
+Fire Breath,Cooldown,"Fires a projectile at a target up to 12 tiles away, dealing (DamageMax * 1.5) damage."
+Fireblast,Cooldown,"Detonates a location up to 12 tiles away, inflicting (DamageMax * 0.9) damage against up to 3 targets within 1 tile (the first target hit also takes +50% damage)."
+Flamestrike,Passive,Has a 15% chance on melee attack to inflict (DamageMax * 1.0) damage.
+Flesheater,Cooldown,"Hits up to 3 targets within 3 tiles, inflicting (DamageMax * 0.75) bleed damage over 15 seconds, with the first target hit taking +50% bleed damage. Will restore (Targets Hit * 2%) of maximum health."
+Flurry,Cooldown,"Fires a projectile at a target up to 6 tiles away, inflicting (DamageMax * 1.3) damage and applying a chill effect of (Control Slots * 2%) for 60 seconds (stacks up to 25%)."
+Frenzy,Passive,Has a 15% chance on melee attack to increase attack speed by 10% for 30 seconds (cannot stack).
+Frigid Blast,Cooldown,"Fires a projectile at a location up to 6 tiles away, hitting up to 3 targets within 1 tile. Inflicts (DamageMax * 0.75) damage, with the first target hit taking +50% damage. Applies a chill effect of (Control Slots * 2%) for 60 seconds (stacks up to 25%)."
+Giant Blood Barrage,Cooldown,Deals 2 melee hits on a target up to 12 tiles away with each hit having a 7.5% chance to inflict Bleed ability on target.
+Giant Corpse Barrage,Cooldown,Deals 2 melee hits on a target up to 12 tiles away with each hit having a 7.5% chance to inflict (DamageMax * 0.5) disease damage every 5 seconds for 20 seconds.
+Giant Fire Barrage,Cooldown,Inflicts 2 melee hits on a target up to 12 tiles away.
+Gore,Passive,Has a 15% chance on melee attack to inflict (DamageMax * 1.0) bleed damage over 15 seconds and apply a pierce effect of (15 * Control Slots) for 5 seconds.
+Gorge,Cooldown,"Inflicts (DamageMax * 2.0) damage against an entangled, hindered, or hamstrung target up to 1 tile away and restores 5% of maximum hit points."
+Grasp,Passive,Has a (5% + (Control Slots * 5%)) chance on melee hit to entangle creatures for 6 seconds or hamstring players for 2 seconds.
+Grit,Passive,"If below 33% hit points, will restore 15% of maximum health (has 15 second cooldown)."
+Fury,Innate,+5% Damage for every 30 seconds alive (max +25%)
+Magic Reflect,Cooldown,Applies the magic reflect spell to the creature.
+Manticore Venom,Cooldown,"Places a delayed effect on a target 1 tile away, that will deal (DamageMax * 2.0) damage after 10 seconds pass, which will ignore target's armor."
+Massive Blood Breath,Cooldown,"Fires projectiles in a cone, hitting against up to 3 targets. Inflicts (DamageMax * 1.0) bleed damage over for 15 seconds, with the first target hit taking +50% damage."
+Massive Bone Breath,Cooldown,"Fires projectiles in a cone, hitting up to 3 targets. Inflicts (DamageMax * 0.75) damage, with the first target hit taking +50% damage. Applies a pierce effect of (Control Slots * 10) for 15 seconds."
+Massive Dusk Breath,Cooldown,"Fires projectiles in a cone, hitting up to 3 targets. Inflicts (DamageMax * 0.7) damage which ignores armor, with the first target hit taking +50% damage. Applies a weaken effect of (Control Slots * 3%) for 15 seconds."
+Massive Fire Breath,Cooldown,"Fires projectiles in a cone, hitting up to 3 targets. Inflicts (DamageMax * 0.9) damage, with the first target hit taking +50% damage."
+Massive Ice Breath,Cooldown,"Fires projectiles in a cone, hitting up to 3 targets. Inflicts (DamageMax * 0.8) damage which ignores armor, and the first target hit taking +50% damage. Applies a chill effect of (Control Slots * 2%) for 60 seconds (stacks up to 25%)."
+Massive Ruby Breath,Cooldown,"Fires projectiles in a long narrow cone, hitting up to 3 targets. Inflicts (DamageMax * 0.5) damage, with the first target hit taking +50% damage. Applies a pierce effect of (Control Slots * 10) for 30 seconds, with damage increased by 50% if target reduced to 0 armor."
+Massive Water Breath,Cooldown,"Fires projectiles in a cone, hitting up to 3 targets. Inflicts (DamageMax * 0.8) damage, with the first target hit taking +50% damage. Applies a cripple effect of (Control Slots * 4%) for 15 seconds."
+Mirror,Cooldown,Spells cast onto the creature have a 15% chance to be reflected back onto the caster.
+Mule,Innate,Creature is a pack animal with a capacity of 50 Stones per Control Slot.
+Poison Dig,Cooldown,"Teleports to a location up to 12 tiles away, hitting up to 3 targets within 2 tiles. Inflicts (DamageMax * 0.75) damage and applies greater poison, with damage increased by 50% if target already has greater poison or above."
+Reactive Armor,Cooldown,"Applies the reactive armor spell to the creature, with 100 total damage reduction."
+Rooted,Innate,Reflects 50% of Damage Taken within 1 tile.
+Regeneration,Passive,"If below 66% hit points, will restore 5% of maximum health (has 15 second cooldown)."
+Sandblast,Cooldown,"Teleports to a location up to 12 tiles away, hitting up to 3 targets within 2 tiles. Inflicts (DamageMax * 0.25) damage and applies a pierce effect of (Control Slots * 15) for 15 seconds."
+Scorching Breath,Cooldown,"Fires a projectile at a target up to 12 tiles away, dealing (DamageMax * 1.5) damage that ignores half of target's armor and increases the damage creature deals to target by 10% for 60 seconds (stacks up to +30%)."
+Shock,Passive,Has a 15% chance on spellcast to deal (DamageMax * 1.0) damage that ignores armor to the target. Hinders creatures for (Control Slots * 1) seconds or hamstrings players for 2 seconds.
+Slime Barrage,Innate,Creature makes its normal melee attacks as ranged attacks up to 12 tiles away.
+Soak,Passive,Has a 15% on a melee attack to apply a cripple effect of (Control Slots * 3%) for 15 seconds.
+Spellblight,Passive,Has a 15% chance on spellcast to inflict (DamageMax * 0.5) disease damage every 5 seconds for 20 seconds.
+Spellbreak,Passive,Has a 15% chance on spellcast to inflict an additional (DamageMax * 0.5) damage that ignores armor and applies a hex effect of (Control Slots * 15) for 15 seconds.
+Spellburn,Passive,Has a 15% chance on spellcast to inflict an additional (DamageMax * 1.0) damage that ignores armor to the target.
+Spellchill,Passive,Has a 15% chance on spellcast to inflict an additional (DamageMax * 0.75) damage that ignores armor and applies a chill effect of (Control Slots * 2%) for 60 seconds (stacks up to 25%).
+Spellcrush,Passive,Has a 15% chance on spellcast to inflict an additional (DamageMax * 0.50) damage that ignores armor and applies a pierce effect of (Control Slots * 10) for 15 seconds.
+Spellflaying,Passive,Has a 15% chance on spellcast to inflict (DamageMax * 1.0) bleed damage over 15 seconds.
+Spellshield,Passive,Spells cast onto the creature have a 15% chance to increase its magic resist skill by (Control Slots * 100) for 3 seconds.
+Spellsurge,Passive,Has a 15% chance on spellcast to increase Damage of the next spellcast within 10 seconds by 125%.
+Spellvenom,Cooldown,Has a 10% chance on spellcast to apply Greater Poison. Inflicts (DamageMax * 0.5) damage if target already has greater poison or above.
+Spine Barrage,Cooldown,"Fires projectiles in a 8 tile radius, hitting up to 6 targets. Inflicts (DamageMax * 0.75) damage, with the first target hit taking +50% damage."
+Steam Cloud,Cooldown,"Immediate enters stealth, hitting up to 3 targets within 3 tiles. Inflicts (DamageMax * 0.65) damage which ignores armor, with the first target hit taking +50% damage."
+Swamp Breath,Cooldown,Fires at a target up to 12 tiles away which inflicts (DamageMax * 1.25) damage. Has a (Control Slots * 20%) chance to entangle creatures for 5 seconds (will not affect players). Has a poisoning skill % chance to apply greater poison.
+Swarmstrike,Cooldown,Has a 15% chance on melee attack to apply a cripple effect of (Control Slots * 2%) and pierce effect of (Control Slots * 10) for 15 seconds.
+Vanish,Cooldown,Creature immediately enters stealth.
+Venom Barrage,Innate,Creature makes its normal melee attacks as ranged attacks up to 12 tiles away. Has a (50% * (poisoning skill / 100)) chance on hit to apply greater poison
+Weaken,Passive,Has a 15% chance on attack to apply a weaken effect of (Control Slots * 4%) for 15 seconds.
+Web,Cooldown,Has a (5 + (Control Slots * 5%)) chance on melee attack to hinder creatures for 3 seconds or hamstring players for 2 seconds.

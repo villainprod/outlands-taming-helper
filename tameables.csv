@@ -1,0 +1,235 @@
+Name,Dungeon,Slots,Taming,Class,Combat,Hits,MinDmg,MaxDmg,Wrestling,Armor,MagicRst,PoisonRst,SpecialRst,Poison,Poisoning,Stealth,UnderdogScalar,CooldownAbility,PassiveAbility,InnateAbility
+Aegis Asp,Aegis Keep,1,105,Utility,Melee,175,16,20,80,50,100,33%,33%,Deadly,20,,1.085,Mirror,,
+Aegis Imp,Aegis Keep,1,100,Attack,Spell,150,11,15,55,25,125,,33%,,,,1.114,Mirror,,
+Aegis Leech,Aegis Keep,1,110,Attack,Melee,175,22,26,75,25,100,33%,33%,,,,1.057,Burrow,,
+Aegis Minion,Aegis Keep,1,110,Attack,Spell,175,12,15,65,25,100,,33%,,,,1.057,Mirror,,
+Aegis Mongbat,Aegis Keep,1,65,Attack,Melee,150,18,22,70,25,100,,33%,,,,1.314,Mirror,,
+Aegis Rat,Aegis Keep,1,55,Utility,Melee,100,16,20,65,25,100,33%,33%,,,,1.371,Mirror,Disease,
+Aegis Scorpion,Aegis Keep,1,100,Tank,Melee,175,16,20,70,75,100,33%,33%,Greater,20,,1.114,Mirror,,
+Aegis Slime,Aegis Keep,1,75,Tank,Melee,175,20,24,70,25,150,33%,33%,,,,1.257,Mirror,Regeneration,Elusive Form
+Aegis Whelp,Aegis Keep,1,105,Attack,Melee,175,22,26,75,50,100,,33%,,,,1.085,Mirror,Frenzy,
+Blood Ape,Aegis Keep,1,85,Attack,Melee,175,18,22,65,25,50,,,,,,1.2,Blood Frenzy,Bleed,
+Blood Courser,Aegis Keep,2,110,Attack,Spell,250,26,30,75,25,75,,,,,,1.057,,Spellflaying,
+Blood Dragon,Aegis Keep,3,120,Attack,Melee,450,52,66,85,50,50,,,,,,1,Massive Blood Breath,Bleed,
+Blood Drake,Aegis Keep,2,110,Attack,Melee,300,38,48,80,50,50,,,,,,1.057,Massive Blood Breath,Bleed,
+Blood Gorger,Aegis Keep,3,120,Attack,Melee,425,44,58,85,25,50,33%,33%,,,,1,Gorge,Bleed,
+Blood Hunter,Aegis Keep,1,115,Attack,Melee,175,20,24,90,25,50,,,,,,1.028,Blood Frenzy,Bleed,
+Blood Purger,Aegis Keep,2,110,Attack,Melee,250,34,40,75,50,50,33%,33%,,,,1.057,Giant Blood Barrage,Bleed,Blood Barrage
+Blood Scorpion,Aegis Keep,2,110,Tank,Melee,250,34,38,75,75,50,33%,,Deadly,30,,1.057,Blood Shield,Bleed,
+Blood Serpent,Aegis Keep,2,115,Utility,Melee,275,30,36,80,50,50,33%,,Lethal,30,,1.028,Blood Expertise,Bleed,
+Bloodskipper,Aegis Keep,1,120,Attack,Melee,200,18,24,80,25,50,,33%,,,,1,Blood Breath,Bleed,
+Bloodwolf,Aegis Keep,2,100,Attack,Melee,325,34,38,80,25,50,,,,,,1.114,Blood Rage,Bleed,
+Bloodworm,Aegis Keep,2,120,Attack,Melee,350,44,54,80,25,50,33%,33%,,,,1,Blood Healing,Bleed,
+Decaying Dragon,Aegis Keep,3,120,Attack,Melee,450,42,54,75,50,50,33%,33%,,,,1,Flesheater,Bleed,
+Giant Blood Purger,Aegis Keep,3,120,Attack,Melee,350,44,54,85,50,50,33%,33%,,,,1,Giant Blood Barrage,Bleed,Blood Barrage
+Goretusk,Aegis Keep,3,115,Attack,Melee,550,46,62,85,25,50,,,,,,1.028,,Gore,Mule
+Sinewseeker,Aegis Keep,1,120,Attack,Melee,200,18,22,75,50,50,33%,33%,,,X,1,Devour,Bleed,Backstab
+Skulker,Aegis Keep,1,90,Utility,Melee,175,16,20,70,50,50,33%,33%,,,X,1.171,Vanish,Disease,Backstab
+Wolfhound,Aegis Keep,1,80,Attack,Melee,175,16,20,70,25,50,,,,,,1.228,Charge,Frenzy,
+Acarid,Cavernam,2,105,Attack,Melee,275,36,48,80,25,50,,,,,,1.085,Burrow,,
+Air Dragon,Cavernam,3,110,Utility,Melee,450,44,60,90,50,50,,,,,,1.057,Air Shield,,
+Air Drake,Cavernam,2,100,Utility,Melee,300,32,38,85,50,50,,,,,,1.114,Air Shield,,
+Arctic Bullvore,Cavernam,3,100,Utility,Melee,500,42,56,85,25,50,,,,,,1.114,Chilled Charge,Chill Touch,Mule
+Barbed Prowler,Cavernam,4,120,Attack,Melee,400,58,76,95,50,50,,,,,,1,Barb Swarm,Frenzy,
+Cave Gorger,Cavernam,3,110,Utility,Melee,400,46,62,80,25,50,33%,,Greater,40,,1.057,Gorge,Grasp,
+Colossal Frost Scorpion,Cavernam,3,115,Tank,Melee,400,38,54,85,75,50,33%,,Deadly,40,,1.028,,Chill Touch,
+Frigid Hornbeast,Cavernam,2,120,Utility,Melee,350,36,48,80,25,50,,33%,,,,1,Frigid Blast,Enrage,
+Lemura,Cavernam,1,120,Tank,Melee,200,18,22,85,75,125,33%,33%,,,,1,Magic Reflect,Spellshield,
+Rime Guar,Cavernam,1,100,Tank,Melee,200,16,20,75,75,50,,,,,,1.114,,Chill Touch,Mule
+Sabeartooth,Cavernam,2,85,Utility,Melee,275,30,36,70,25,50,,,,,,1.2,Chilled Charge,Chill Touch,
+Snowdrift,Cavernam,1,100,Utility,Melee,150,18,22,75,25,100,33%,33%,,,,1.114,Flurry,Regeneration,Elusive Form
+White Wyrm,Cavernam,3,120,Utility,Melee,450,42,58,90,50,50,,,,,,1,Massive Ice Breath,Chill Touch,
+White Wyrmling,Cavernam,2,110,Utility,Melee,300,30,36,85,50,50,,,,,,1.057,Massive Ice Breath,Chill Touch,
+Winter Wolf,Cavernam,1,65,Utility,Melee,150,16,20,60,25,50,,,,,,1.314,,Frenzy,
+Anaconda,Darkmire Temple,2,85,Utility,Melee,250,34,40,80,50,50,33%,,Deadly,30,,1.2,,,
+Ant Lion,Darkmire Temple,2,80,Attack,Melee,250,28,34,75,75,50,,33%,,,,1.228,Dig,,Mule
+Arboreal Wisp,Darkmire Temple,3,105,Attack,Spell,225,36,42,85,25,150,,,,,,1.085,,Earth Seeds,Elusive Form
+Black Widow,Darkmire Temple,2,100,Utility,Melee,200,32,36,90,25,50,33%,,Lethal,30,,1.114,Web,Disease,
+Colossal Black Widow,Darkmire Temple,4,120,Utility,Melee,400,60,80,100,25,50,33%,,Lethal,50,,1,Web,Disease,
+Colossal Poison Dart Frog,Darkmire Temple,3,100,Utility,Melee,350,48,60,90,25,50,33%,33%,Lethal,40,,1.114,,Regeneration,
+Colossal Swamp Slug,Darkmire Temple,2,75,Attack,Melee,350,38,46,75,25,50,,33%,,,,1.257,,,Slime Barrage
+Giant Black Widow,Darkmire Temple,3,110,Utility,Melee,300,48,60,95,25,50,33%,,Lethal,40,,1.057,Web,Disease,
+Giant Poison Dart Frog,Darkmire Temple,2,90,Utility,Melee,250,32,36,85,25,50,33%,33%,Lethal,30,,1.171,,Regeneration,
+Giant Swamp Slug,Darkmire Temple,1,65,Attack,Melee,200,18,22,70,25,50,,33%,,,,1.314,,,Slime Barrage
+Jaguar,Darkmire Temple,1,65,Attack,Melee,125,12,16,65,25,50,,,,,X,1.314,Vanish,Frenzy,Backstab
+Muck,Darkmire Temple,1,50,Utility,Melee,100,12,16,55,50,100,33%,33%,Greater,20,,1.4,,Regeneration,Elusive Form
+Otyugh,Darkmire Temple,4,120,Tank,Melee,500,38,56,80,75,100,33%,33%,,,,1,Spine Barrage,,
+Silverback,Darkmire Temple,1,60,Attack,Melee,150,18,22,60,25,50,,,,,,1.342,,Frenzy,
+Swamp Dragon,Darkmire Temple,3,115,Utility,Melee,450,50,60,85,50,50,33%,,Greater,40,,1.028,Swamp Breath,,
+Swamp Drake,Darkmire Temple,2,105,Utility,Melee,300,36,42,80,50,50,33%,,Greater,30,,1.085,Swamp Breath,,
+Swamp Spider,Darkmire Temple,1,55,Utility,Melee,125,12,16,60,25,50,33%,,Greater,20,,1.371,Web,,
+Bonfire Wisp,Inferno,3,110,Attack,Spell,250,36,42,85,25,150,,,,,,1.057,,Spellburn,Elusive Form
+Bullvore,Inferno,3,80,Attack,Melee,450,44,60,80,25,50,,,,,,1.228,Charge,,Mule
+Embear,Inferno,2,65,Attack,Melee,225,26,32,70,25,50,,,,,,1.314,Charge,Flamestrike,
+Fire Beetle,Inferno,2,75,Tank,Melee,250,30,36,75,75,50,,,,,,1.257,,Flamestrike,Mule
+Fire Crawler,Inferno,3,100,Tank,Melee,450,42,62,80,75,50,,,,,,1.114,Crush,Flamestrike,
+Fire Minion,Inferno,1,90,Attack,Spell,150,9,13,60,25,75,,,,,,1.171,,Spellburn,
+Fire Salamander,Inferno,1,60,Attack,Melee,150,14,18,60,25,50,,,,,,1.342,,Frenzy,
+Firebat,Inferno,1,50,Attack,Melee,125,12,16,65,25,50,,33%,,,,1.4,,Bleed,
+Flamehound,Inferno,1,55,Attack,Melee,125,14,18,60,25,50,,,,,,1.371,,Frenzy,
+Hellhound,Inferno,2,90,Attack,Melee,300,30,36,80,25,50,,,,,,1.171,Fire Breath,Flamestrike,Mule
+Molten Mongbat,Inferno,1,95,Attack,Melee,175,20,24,75,25,50,,,,,,1.142,,Flamestrike,
+Searing Bullvore,Inferno,3,120,Attack,Melee,550,50,68,90,25,50,,,,,,1,Charge,Flamestrike,Mule
+Searing Imp,Inferno,1,80,Attack,Spell,150,9,12,50,25,100,,,,,,1.228,,Spellburn,
+Searing Lizard,Inferno,1,65,Utility,Melee,150,18,22,55,50,50,,,,,,1.314,Crush,Flamestrike,
+Searing Mantis,Inferno,2,70,Attack,Melee,250,28,34,75,50,50,,,,,,1.285,,Bleed,
+Bogyugh,Kraul Hive,4,120,Tank,Melee,500,32,52,80,75,100,,33%,,,,1,Bog Barrage,,
+Brasshopper,Kraul Hive,2,120,Attack,Melee,300,38,44,85,50,50,,,,,,1,Brass Tacks,,
+Colossal Crystal Beetle,Kraul Hive,3,120,Tank,Melee,450,50,70,85,75,100,,,,,,1,Spelleater Shield,,Mule
+Colossal Dung Beetle,Kraul Hive,4,120,Tank,Melee,550,52,74,80,75,50,,33%,,,,1,Dung Roller,,Mule
+Colossal Spitting Viper,Kraul Hive,3,120,Utility,Melee,350,40,46,85,50,50,33%,,Greater,40,,1,,,Venom Barrage
+Colossal Swamp Beetle,Kraul Hive,3,120,Tank,Melee,450,46,62,85,75,100,33%,,Greater,40,,1,Poisoneater Shield,,Mule
+Gargantua Spider,Kraul Hive,4,120,Utility,Melee,450,62,84,105,25,50,33%,,Deadly,50,,1,Weakening Web,,
+Giant Chameleon,Kraul Hive,2,100,Attack,Melee,250,30,38,85,25,50,,,,,X,1.114,Vanish,Frenzy,Backstab
+Giant Crystal Beetle,Kraul Hive,2,110,Tank,Melee,300,34,40,80,75,100,,,,,,1.057,Spelleater Shield,,Mule
+Giant Locust,Kraul Hive,2,110,Utility,Melee,275,36,42,80,50,50,,,,,,1.057,Swarmstrike,,
+Giant Spitting Viper,Kraul Hive,2,110,Utility,Melee,250,30,38,80,50,50,33%,,Greater,30,,1.057,,,Venom Barrage
+Giant Swamp Beetle,Kraul Hive,2,110,Tank,Melee,300,32,38,80,75,100,33%,,Greater,30,,1.057,Poisoneater Shield,,Mule
+Glowworm,Kraul Hive,2,110,Utility,Melee,275,40,50,80,25,50,,,,,,1.057,Glowmark,,
+Jungle Mantis,Kraul Hive,2,105,Utility,Melee,300,38,44,80,50,50,33%,,Deadly,30,,1.085,,Bleed,
+Savage Primordial,Kraul Hive,2,115,Attack,Melee,300,40,46,80,25,50,,,,,,1.028,Primal Rage,,
+Shadow Prowler,Kraul Hive,4,120,Attack,Melee,400,58,76,90,50,50,,,,,,1,,Frenzy,Shadowstrikes
+Spitting Viper,Kraul Hive,1,100,Utility,Melee,175,22,28,75,50,50,33%,,Greater,20,,1.114,,,Venom Barrage
+Sword Spider,Kraul Hive,3,120,Utility,Melee,300,52,64,95,25,50,33%,,Deadly,40,,1,Web,Swordspin,
+Ankheg,Mount Petram,2,105,Utility,Melee,300,34,42,80,75,50,33%,33%,Greater,30,,1.085,Poison Dig,,Mule
+Cave Bear,Mount Petram,1,60,Attack,Melee,175,18,22,55,25,50,,,,,,1.342,,Enrage,
+Colossal Trapdoor Spider,Mount Petram,4,120,Utility,Melee,450,58,76,90,25,50,33%,,Greater,50,X,1,Web,,Backstab
+Devilbat,Mount Petram,1,80,Utility,Melee,150,18,22,80,25,50,,33%,,,,1.228,,Weaken,
+Dusk Dragon,Mount Petram,3,110,Utility,Melee,450,50,66,90,50,50,,,,,,1.057,Massive Dusk Breath,,
+Dusk Drake,Mount Petram,2,100,Utility,Melee,300,34,42,85,50,50,,,,,,1.114,Massive Dusk Breath,,
+Earth Dragon,Mount Petram,3,115,Tank,Melee,450,38,58,80,50,50,,,,,,1.028,Earth Shield,,
+Earth Drake,Mount Petram,2,105,Tank,Melee,300,28,38,75,50,50,,,,,,1.085,Earth Shield,,
+Giant Trapdoor Spider,Mount Petram,2,95,Utility,Melee,200,30,36,80,25,50,33%,,Greater,30,X,1.142,Web,,Backstab
+Rock Guar,Mount Petram,1,50,Tank,Melee,125,14,18,55,75,50,,,,,,1.4,,,Mule
+Stinger,Mount Petram,1,90,Utility,Melee,150,16,20,80,25,50,33%,33%,Deadly,20,,1.171,,,
+Trapdoor Spider,Mount Petram,1,75,Utility,Melee,125,14,18,60,25,50,33%,,Greater,20,X,1.257,Web,,Backstab
+Volt Wisp,Mount Petram,3,115,Utility,Spell,275,34,42,90,25,150,,,,,,1.028,,Shock,Elusive Form
+Colossal Frog,NewPlayerDungeon,2,50,Attack,Melee,200,32,38,55,25,50,33%,33%,,,,1.4,,Regeneration,
+Giant Bat,NewPlayerDungeon,1,40,Attack,Melee,100,10,14,60,25,50,,33%,,,,1.457,,Bleed,
+Giant Frog,NewPlayerDungeon,1,40,Attack,Melee,100,16,20,50,25,50,33%,33%,,,,1.457,,Regeneration,
+Giant Rat,NewPlayerDungeon,1,30,Utility,Melee,75,10,14,55,25,50,33%,33%,,,,1.514,,Disease,
+Giant Spider,NewPlayerDungeon,2,60,Utility,Melee,200,26,30,70,25,50,33%,,Greater,30,,1.342,Web,,
+Guar,NewPlayerDungeon,1,40,Tank,Melee,125,12,16,45,50,50,,,,,,1.457,,,Mule
+Mongbat,NewPlayerDungeon,1,30,Attack,Melee,75,10,14,50,25,50,,,,,,1.514,,,
+Adder,Nusero,2,80,Utility,Melee,225,28,36,75,50,50,33%,,Deadly,30,,1.228,,,
+Army Ant,Nusero,1,100,Utility,Melee,175,20,24,75,50,50,,,,,,1.114,Swarmstrike,,
+Asp,Nusero,1,70,Utility,Melee,125,12,16,75,50,50,33%,,Deadly,20,,1.285,,,
+Azure Wyrm,Nusero,3,120,Attack,Melee,450,46,62,90,50,50,,,,,,1,Concussion Breath,,
+Azure Wyrmling,Nusero,2,110,Attack,Melee,300,32,38,85,50,50,,,,,,1.057,Concussion Breath,,
+Chameleon,Nusero,1,75,Attack,Melee,150,16,20,65,25,50,,,,,X,1.257,Vanish,Frenzy,Backstab
+Dragon,Nusero,3,95,Attack,Melee,450,40,60,85,50,50,,,,,,1.142,Fire Breath,,
+Dragon Whelp,Nusero,1,85,Attack,Melee,150,18,22,60,50,50,,,,,,1.2,Fire Breath,,
+Drake,Nusero,2,85,Attack,Melee,300,30,36,80,50,50,,,,,,1.2,Fire Breath,,
+Drake Whelp,Nusero,1,75,Attack,Melee,125,16,20,60,50,50,,,,,,1.257,Fire Breath,,
+Eldritch Dragon,Nusero,3,115,Utility,Spell,450,36,44,80,50,150,,,,,,1.028,Eldritch Breath,Spellshield,
+Eldritch Drake,Nusero,2,105,Utility,Spell,300,22,28,70,50,100,,,,,,1.085,Eldritch Breath,Spellshield,
+Ember Dragon,Nusero,3,115,Attack,Melee,450,48,64,85,50,50,,,,,,1.028,Massive Fire Breath,Flamestrike,
+Ember Drake,Nusero,2,105,Attack,Melee,300,34,40,80,50,50,,,,,,1.085,Massive Fire Breath,Flamestrike,
+Flame Purger,Nusero,2,90,Attack,Melee,225,36,44,75,50,50,,33%,,,,1.171,Giant Fire Barrage,,Fire Barrage
+Harvestman,Nusero,2,120,Utility,Melee,275,40,46,90,25,50,,33%,,,,1,Burrow,Disease,
+Komodo,Nusero,1,100,Utility,Melee,200,24,30,70,50,50,,,,,,1.114,Crush,,
+Monitor,Nusero,1,60,Utility,Melee,175,18,22,65,50,50,,,,,,1.342,Crush,,
+Monitor Hatchling,Nusero,1,50,Utility,Melee,125,16,20,55,50,50,,,,,,1.4,Crush,,
+Primordial,Nusero,1,60,Attack,Melee,150,16,20,70,25,50,,,,,,1.342,,Frenzy,
+Primordial Whelp,Nusero,1,50,Attack,Melee,125,14,18,65,25,50,,,,,,1.4,,Frenzy,
+Ruby Wyrm,Nusero,3,120,Utility,Melee,450,52,72,85,50,50,,,,,,1,Massive Ruby Breath,,
+Ruby Wyrmling,Nusero,2,110,Utility,Melee,300,40,46,80,50,50,,,,,,1.057,Massive Ruby Breath,,
+Smoke Dragon,Nusero,3,120,Attack,Melee,450,46,62,90,50,50,,,,,X,1,Steam Cloud,,Elusive Form
+Smoke Drake,Nusero,2,110,Attack,Melee,300,32,38,85,50,50,,,,,X,1.057,Steam Cloud,,Elusive Form
+Smoke Faerie Dragon,Nusero,1,120,Attack,Melee,200,18,22,75,50,50,,,,,X,1,Steam Cloud,,Elusive Form
+Sun Wyrm,Nusero,3,120,Attack,Melee,450,52,66,85,50,50,,,,,,1,Scorching Breath,,
+Sun Wyrmling,Nusero,2,110,Attack,Melee,300,38,44,80,50,50,,,,,,1.057,Scorching Breath,,
+Wyvern,Nusero,3,105,Utility,Melee,300,48,58,100,50,50,33%,,Lethal,40,,1.085,,,
+Wyvern Hatchling,Nusero,2,95,Utility,Melee,200,30,36,90,50,50,33%,,Lethal,30,,1.142,,,
+Black Cat,Ossuary,1,120,Attack,Melee,175,22,28,90,25,50,33%,33%,,,,1,,Bad Luck,
+Cave Bat,Ossuary,1,70,Attack,Melee,125,18,22,80,25,50,,33%,,,,1.285,,Bleed,
+Colossal Blazing Beetle,Ossuary,4,120,Tank,Melee,600,52,74,80,75,50,,,,,,1,Fiery Charge,Flamestrike,Mule
+Colossal Sandroach,Ossuary,3,115,Tank,Melee,500,50,70,85,75,50,33%,33%,,,,1.028,,,
+Colossal Searing Scorpion,Ossuary,3,110,Tank,Melee,375,38,56,85,75,50,33%,,Deadly,40,,1.057,,Flamestrike,
+Cryptwing,Ossuary,1,110,Attack,Melee,175,20,26,95,25,50,,,,,,1.057,Burrow,Frenzy,
+Fiery Leaper,Ossuary,1,120,Attack,Melee,200,18,24,80,25,50,,,,,,1,Fire Breath,Flamestrike,
+Fire Ant,Ossuary,1,60,Attack,Melee,125,16,20,65,50,55,,,,,,1.342,,Flamestrike,
+Giant Sandroach,Ossuary,1,105,Tank,Melee,225,20,24,75,75,50,33%,33%,,,,1.085,,,Mule
+Giant Scorpion,Ossuary,2,65,Tank,Melee,225,26,30,70,75,50,33%,,Greater,30,,1.314,,,
+Nightmare,Ossuary,2,100,Attack,Spell,225,22,28,75,25,75,,,,,,1.114,,Spellburn,
+Phoenix,Ossuary,4,120,Attack,Spell,350,42,64,70,25,125,,,,,,1,Epic Barrage,Spellsurge,
+Radiant Burrowbug,Ossuary,2,115,Attack,Melee,325,30,38,80,75,50,,33%,,,,1.028,Fiery Dig,Flamestrike,Mule
+Sand Crawler,Ossuary,3,90,Tank,Melee,400,48,62,80,75,50,,,,,,1.171,Crush,,Mule
+Sand Muck,Ossuary,1,115,Utility,Melee,175,22,26,80,25,100,33%,33%,,,,1.028,Sandblast,Regeneration,Elusive Form
+Scarab,Ossuary,2,70,Tank,Melee,250,34,40,70,75,100,,,,,,1.285,Magic Reflect,,Mule
+Scorpion,Ossuary,1,55,Tank,Melee,125,14,18,55,75,50,33%,,Greater,20,,1.371,,,
+Skeletal Dragon,Ossuary,3,100,Utility,Melee,450,50,68,70,50,50,33%,33%,,,,1.114,Massive Bone Breath,,
+Sphinx,Ossuary,1,110,Tank,Melee,200,18,22,80,75,100,33%,33%,,,,1.057,Magic Reflect,,
+Temple Guardian,Ossuary,3,115,Attack,Melee,350,44,66,85,75,100,33%,33%,,,X,1.028,Reactive Armor|Magic Reflect,,Backstab
+Deep Crawler,Pulma,3,80,Tank,Melee,350,48,62,75,75,50,,,,,,1.228,Crush,,Mule
+Drowned Dragon,Pulma,3,115,Utility,Melee,450,42,54,75,50,50,33%,33%,,,,1.028,Drowned Barrage,,
+Fortress Beetle,Pulma,4,120,Tank,Melee,800,60,80,90,75,100,33%,33%,,,,1,Mirror,Grit,Mule
+Husk Crab,Pulma,1,90,Tank,Melee,175,18,22,75,75,50,,,,,,1.171,Crush,,
+Minion,Pulma,1,70,Attack,Spell,150,9,13,50,25,75,,,,,,1.285,,,
+Reef Serpent,Pulma,2,100,Utility,Melee,225,32,38,80,50,50,33%,,Lethal,30,,1.114,,,
+Shallow Water,Pulma,1,50,Utility,Melee,100,16,20,60,25,100,33%,33%,,,,1.4,,Regeneration,Elusive Form
+Tidal Mantis,Pulma,2,100,Utility,Melee,300,40,46,80,50,50,,,,,,1.114,,Soak,
+Water Dragon,Pulma,3,110,Utility,Melee,450,52,66,85,50,50,33%,,,,,1.057,Massive Water Breath,,
+Water Drake,Pulma,2,100,Utility,Melee,300,38,44,80,50,50,33%,,,,,1.114,Massive Water Breath,,
+Blood Mephit,Shadowspire Cathedral,1,115,Attack,Spell,175,12,16,70,25,100,,,,,,1.028,,Spellflaying,
+Corrupted Hornbeast,Shadowspire Cathedral,2,120,Utility,Melee,350,40,50,80,25,50,,33%,,,,1,Corruption Blast,Enrage,
+Earth Mephit,Shadowspire Cathedral,1,115,Utility,Spell,175,12,16,70,25,100,,,,,,1.028,,Spellcrush,
+Eldritch Mephit,Shadowspire Cathedral,1,115,Utility,Spell,175,11,15,70,25,100,,,,,,1.028,,Spellbreak,
+Fire Mephit,Shadowspire Cathedral,1,115,Attack,Spell,175,12,15,70,25,100,,,,,,1.028,,Spellburn,
+Frost Mephit,Shadowspire Cathedral,1,115,Utility,Spell,175,12,16,70,25,100,,,,,,1.028,,Spellchill,
+Gravebug,Shadowspire Cathedral,1,115,Tank,Melee,225,18,22,75,75,50,33%,33%,,,,1.028,Devour,Disease,
+Poison Mephit,Shadowspire Cathedral,1,115,Utility,Spell,175,12,16,70,25,100,33%,,,,,1.028,Spellvenom,,
+Blightmare,The Mausoleum,2,120,Utility,Spell,275,26,32,75,25,75,33%,33%,,,,1,,Spellblight,
+Carrion Beetle,The Mausoleum,2,65,Tank,Melee,250,26,32,70,75,50,33%,33%,,,,1.314,,Disease,Mule
+Corpse Eater,The Mausoleum,1,55,Utility,Melee,125,18,22,60,50,50,33%,33%,,,,1.371,,Disease,
+Corpse Purger,The Mausoleum,2,110,Utility,Melee,250,34,40,75,50,50,33%,33%,,,,1.057,Giant Corpse Barrage,Disease,Corpse Barrage
+Darkscale,The Mausoleum,4,120,Utility,Melee,500,60,80,95,50,50,,33%,,,,1,Darkstrike,,Elusive Form
+Devourer Beetle,The Mausoleum,2,100,Tank,Melee,300,32,38,80,75,50,33%,33%,,,,1.114,Devour,Disease,Mule
+Entozoon,The Mausoleum,2,120,Utility,Melee,300,42,54,80,25,50,33%,33%,,,,1,Devour,Eversion,
+Familiar,The Mausoleum,1,50,Attack,Spell,100,8,11,40,25,75,,,,,,1.4,,,
+Imp,The Mausoleum,1,60,Attack,Spell,125,9,12,45,25,100,,,,,,1.342,,,
+Incubus,The Mausoleum,1,115,Utility,Spell,175,12,15,70,25,100,,,,,,1.028,,Dreamlull,
+Manticore,The Mausoleum,3,105,Utility,Melee,400,50,70,90,50,50,33%,,Deadly,40,,1.085,Manticore Venom,,
+Nightstalker,The Mausoleum,2,110,Attack,Melee,300,32,40,85,25,50,,,,,X,1.057,Charge,Frenzy,Backstab
+Shade Wolf,The Mausoleum,1,100,Attack,Melee,175,18,22,70,25,50,,,,,X,1.114,Vanish,Frenzy,Backstab
+Shadow Minion,The Mausoleum,1,120,Utility,Spell,175,13,17,70,25,100,,,,,,1,,Weaken,
+Vampire Bat,The Mausoleum,1,90,Attack,Melee,150,20,24,85,25,50,,33%,,,,1.171,Devour,Bleed,
+Void Slime,The Mausoleum,1,110,Attack,Melee,200,24,28,80,25,50,33%,33%,,,,1.057,,Regeneration,Slime Barrage
+Bird,Wilderness,1,25,Attack,Melee,25,4,6,25,25,50,,,,,,1.542,,,
+Bird of Paradise,Wilderness,4,120,Utility,Spell,350,42,64,70,25,125,,,,,,1,Tranquility,,
+Bison,Wilderness,2,35,Attack,Melee,200,26,32,40,25,50,,,,,,1.485,,,
+Black Bear,Wilderness,1,50,Attack,Melee,150,18,22,50,25,50,,,,,,1.4,,Enrage,
+Bonehorn,Wilderness,2,115,Attack,Melee,275,40,46,80,50,50,,,,,,1.028,Devour,Gore,
+Brown Bear,Wilderness,1,50,Attack,Melee,150,18,22,50,25,50,,,,,,1.4,,Enrage,
+Bull,Wilderness,2,35,Attack,Melee,200,26,32,40,25,50,,,,,,1.485,,,
+Cat,Wilderness,1,25,Attack,Melee,50,6,10,20,25,50,,,,,,1.542,,,
+Chicken,Wilderness,1,25,Attack,Melee,50,4,6,20,25,50,,,,,,1.542,,,
+Colossal Boa,Wilderness,4,120,Utility,Melee,400,56,72,100,50,50,33%,,Greater,50,,1,Constrict,,
+Colossal Huntsman,Wilderness,4,120,Utility,Melee,450,62,84,105,25,50,33%,,Deadly,50,,1,Hunting Web,,
+Colossal Strider,Wilderness,4,120,Attack,Melee,700,60,80,95,25,50,,,,,,1,War Stomp,,Mule
+Cougar,Wilderness,1,45,Attack,Melee,125,14,18,55,25,50,,,,,,1.428,,Frenzy,
+Cow,Wilderness,2,30,Attack,Melee,150,24,30,40,25,50,,,,,,1.514,,,
+Desert Ostard,Wilderness,1,65,Attack,Melee,150,12,16,70,25,50,,,,,,1.314,,Frenzy,
+Dog,Wilderness,1,25,Attack,Melee,50,6,10,20,25,50,,,,,,1.542,,,
+Eagle,Wilderness,1,35,Attack,Melee,75,8,12,45,25,50,,,,,,1.485,,,
+Elk,Wilderness,1,35,Attack,Melee,100,14,18,40,25,50,,,,,,1.485,,,
+Forest Ostard,Wilderness,1,75,Attack,Melee,150,14,18,70,25,50,,,,,,1.257,,,
+Frenzied Ostard,Wilderness,1,95,Attack,Melee,175,16,22,80,25,50,,,,,,1.142,,Frenzy,
+Giant Strider,Wilderness,3,110,Attack,Melee,500,50,70,85,25,50,,,,,,1.057,War Stomp,,Mule
+Goat,Wilderness,1,25,Attack,Melee,50,6,10,20,25,50,,,,,,1.542,,,
+Great Hart,Wilderness,1,35,Attack,Melee,100,14,18,40,25,50,,,,,,1.485,,,
+Grizzly Bear,Wilderness,1,55,Attack,Melee,175,18,22,55,25,50,,,,,,1.371,,Enrage,
+Hind,Wilderness,1,30,Attack,Melee,75,8,12,35,25,50,,,,,,1.514,,,
+Horse,Wilderness,1,50,Attack,Melee,150,12,16,40,25,50,,,,,,1.4,,,
+Llama,Wilderness,1,50,Attack,Melee,150,12,16,40,25,50,,,,,,1.4,,,
+Pig,Wilderness,1,25,Attack,Melee,50,6,10,20,25,50,,,,,,1.542,,,
+Polar Bear,Wilderness,1,55,Attack,Melee,175,18,22,55,25,50,,,,,,1.371,,Enrage,
+Sand Crab,Wilderness,1,55,Tank,Melee,125,16,20,60,75,50,,,,,,1.371,Crush,,
+Sandstalker,Wilderness,1,120,Attack,Melee,225,18,22,80,25,50,,,,,X,1,Vanish,,Dust Up
+Sheep,Wilderness,1,25,Attack,Melee,50,6,10,20,25,50,,,,,,1.542,,,
+Sunscale,Wilderness,4,120,Attack,Melee,500,60,80,95,50,50,,,,,,1,Scorching Breath,,
+Tundra Ostard,Wilderness,1,85,Attack,Melee,175,14,18,75,25,50,,,,,,1.2,,Frenzy,
+Walrus,Wilderness,2,35,Attack,Melee,200,10,14,30,25,50,,,,,,1.485,,,
+Warpig,Wilderness,2,110,Attack,Melee,325,40,50,85,25,50,,,,,,1.057,,Warpigment,
+Wisp,Wilderness,3,100,Attack,Spell,200,32,38,80,25,125,,,,,,1.114,,Spellsurge,Elusive Form
+Wolf,Wilderness,1,45,Attack,Melee,125,14,18,55,25,50,,,,,,1.428,,Frenzy,

@@ -1,0 +1,14 @@
+Attack Class Upgrades,Attack Class Upgrades
+Ability Name,"Ability Description (Tier 1, Tier 2, Tier 3)"
+Ambush,"Damage Dealt increased by (10%, 20%, 30%) and Damage Resistance by (5% / 10% / 15%) for 10 seconds after exiting Stealth (including on Backstab) Damage Dealt increased by (4% / 8% / 12%) if creature does not have Stealth"
+Cornered,"Damage Dealt increased by (10%, 20%, 30%) if follower has taken damage from another creature within the last 10 seconds Damage Dealt increased by (4% / 8% / 12%) if follower has not taken damage from another creature within the last 10 seconds"
+Feed,"If creature has a Bleed effect on target, Melee Attacks have a (10% / 20% / 30%) chance to restore 10% of Max Health (up to once every 15 seconds) Damage Dealt increased by (4%, 8%, 12%) if target cannot inflict Bleed effects"
+Feral,"While Frenzied or Enraged, creature's first non-backstab Melee Attack every 15 seconds has its Damage increased by (80% / 160% / 240%) Damage Dealt increased by (4%, 8%, 12%) if creature does not have either of those abilities"
+Hunting Party,Damage Dealt increased by (10% / 20% / 30%) if creature and Tamer are both within 1 tile of target Damage Dealt increased by (4% / 8% / 12%) if creature or Tamer are more than 1 tile from target
+Immolate,Flamestrike and Spellburn abilities now have Damage increased by (50% / 100% / 150%) Damage Dealt increased by (4% / 8% / 12%) if creature does not have either of those abilities
+Lethality,"Melee Attacks and Spellcasts have a (10% / 20% / 30%) chance to inflict +100% Damage, otherwise will inflict (4% / 8% / 12%) additional Damage"
+Menagerie,Damage Dealt increased by ((2% / 4% / 6%) * Different Types of Followers Controlled By Player) Healing Amounts increased by ((2% / 4% / 6%) * Different Types of Followers Controlled By Player)
+Mutation,Reduces cooldown length of Cooldown Abilities by (2 / 4 / 6) seconds Damage Dealt increased by (4% / 8% / 12%) if creature does not have a Cooldown Ability
+Pelt,Damage Dealt increased by (8% / 16% / 24%) if target is 4 tiles away or more Damage Dealt increased by (4% / 8% / 12%) if target is within 3 tiles
+Primal,Chance to trigger Passive Abilities increased by (33% / 66% / 100%) of normal Damage Dealt increased by (4% / 8% / 12%) if creature does not have a Passive Ability
+Swarm,Damage Dealt increased by ((2% / 4% / 6%) * Total Followers Controlled By Player) Healing Amounts increased by ((2% / 4% / 6%) * Total Followers Controlled By Player)

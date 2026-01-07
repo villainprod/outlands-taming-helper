@@ -1,0 +1,14 @@
+Utility Class Upgrades,Utility Class Upgrades
+Ability Name,"Ability Description (Tier 1, Tier 2, Tier 3)"
+Beast Sting,"If any of your creatures has Poison or Disease active on target, increases Damage of Melee Attacks by (10% / 20% / 30%) if creature can inflict Poison or Disease effects Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Poison or Disease effects"
+Breaker,Melee Attacks and Spellcasts ignore (22% / 44% / 66%) of target's Armor and Magic Resist
+Carrion,"If creature has Disease active on target, Melee Attacks have a (10% / 20% / 30%) chance to restore 12.5% of Max Health (up to once every 15 seconds) Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Disease effects"
+Contagion,Increases the Damage of Disease effects by (33% / 66% / 100%) Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Disease effects
+Debilitate,"If any of your creatures has Poison or Disease active on target, the target will receive a stackable (1% / 2% / 3%) Damage Penalty against the Tamer and their Followers for each Control Slot worth of Utility-class creatures that can inflict Poison or Disease effects Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Poison or Disease effects"
+Frostbite,Damage of Chill Abilities increased by (15% / 30% / 45%) and amount of Chill effect applied increased by (33% / 66% / 100%) of normal Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Chill effects
+Metabolism,Successful Melee Attacks will restore (0.66% / 1.33% / 2.0%) of Max Health Damage Dealt increased by (4% / 8% / 12%) if already at Max Health
+Opportunity,"Melee and Spell Damage increased by (20%, 40%, 60%) if creature has applied an Entangle or Hinder effect to the target within last 10 seconds Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Entangle or Hinder effects"
+Punishment,"When creature's Pierce or Hex effects expire on a target, will inflict (DamageMax * (0.5 / 1.0 / 1.5)) Damage onto them which ignores Armor Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Pierce or Hex effects"
+Scour,"If creature has a Weaken or Cripple effect on target, their Tamer will receive a ((1.5% / 3% / 4.5%) * Control Slots) Damage Bonus (stackable) against the target Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict these effects"
+Swoop,The next Melee Attack or Spellcast within 10 seconds after using a Cooldown Ability will have its Damage increased by (33% / 66% / 100%) Damage Dealt increased by (4% / 8% / 12%) if creature does not have a Cooldown Ability
+Toxic,"If any of your creatures has Poison or Disease active on target, their Tamer will receive a stackable (1% / 2% / 3%) Damage Bonus against the target for each Control Slot worth of Utility-class creatures that can inflict Poison or Disease effects Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Poison or Disease effects"

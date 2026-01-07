@@ -1,0 +1,14 @@
+Tank Class Upgrades,Tank Class Upgrades
+Ability Name,"Ability Description (Tier 1, Tier 2, Tier 3)"
+Adrenaline,"Creature has a (15% / 30% / 45%) chance on any Damage Taken that would kill it, to instead take 1 Damage and receive 50% Damage Resistance for the next 5 seconds"
+Aggression,Melee Damage increased by (5% / 10% / 15%) for each target within 2 tiles that is Aggroed against them (up to 3 targets) Damage Dealt increased by (4% / 8% / 12%) if no targets within 2 tiles are Aggroed against them
+Behemoth,Melee and Spell Damage increased by (10% / 20% / 30%) and Damage Resistance by (2% / 4% / 6%) if creature takes 3 or more Control Slots Damage Resistance increased by (1.33% / 2.66% / 4%) if creature takes 1 or 2 Control Slots
+Critical Care,Veterinary Resurrection chances increased by (33% / 66% / 100%) of normal and creature will Resurrect with an additional (10% / 20% / 30%) of Max Health [will not work if PvP Flagged]
+Deflection,Grants Damage Resistance of ((1.5% / 3% / 4.5%) * Control Slots) to non-Tank Followers and ((0.75% / 1.5% / 2.25%) * Control Slots) to the Tamer if they are within 2 tiles
+Guardian,((3% / 6% / 9%) * Control Slots) of Damage Taken by non-Tank Class Followers and ((1.5% / 3% / 4.5%) * Control Slots) of Damage Taken by Tamer within 2 tiles will be redirected amongst Tank Class followers (divided equally) as a direct health loss
+Hearty,Damage Dealt increased by (10% / 20% / 30%) when above 75% Health Damage Dealt increased by (4% / 8% / 12%) when below 75% Health
+Mending,Healing Amounts increased by (12% / 24% / 36%) and Curing chances by (20% / 40% / 60%) Damage Dealt increased by (4% / 8% / 12%) when at Max Health and not Poisoned
+Stalwart,"Damage Resistance increased by (3% / 6% / 9%) and has a (25% / 50% / 75%) chance to ignore any non-movement Debuff effects (such as Cripple, Pierce, Hex, etc)"
+Survival,Damage Resistance increased by (4% / 8% / 12%)
+Tolerance,"Has a (11% / 22% / 33%) chance to ignore any Bleed, Disease, or Poison tick Damage Resistance increased by (1.33% / 2.66% / 4.0%) while not under the effect of Bleed, Disease, or Poison"
+Trample,Melee Attacks inflict an additional (DamageMax * (8% / 16% / 24%)) to 2 random targets within 1 tile of defender
