@@ -171,6 +171,7 @@ function runRecommendations() {
 
   const teamScore = scoreTeam(selectedPets, playstyle);
   const teamRecommendations = recommendTeam(selectedPets, playstyle);
+  console.log("Recommended pets:", teamRecommendations);
   const recommendedNames = teamRecommendations.length > 0
     ? teamRecommendations.map(r => r.pet.name).join(", ")
     : "No additional pets suggested (team already at or near 5 slots).";
