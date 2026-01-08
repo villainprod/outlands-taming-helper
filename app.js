@@ -1,13 +1,13 @@
 let pets = [];
-let bestiary = [];
+let bestiaryAttack = [];
 let selectedPetIds = [];
 
 async function loadData() {
   const petsRes = await fetch("pets.json");
   pets = await petsRes.json();
 
-  const bestiaryRes = await fetch("bestiary.json");
-  bestiary = await bestiaryRes.json();
+  const bestiaryRes = await fetch("bestiary_attack.json");
+  bestiaryAttack = await bestiaryRes.json();
 
   populatePetSelect();
 }
@@ -65,50 +65,68 @@ function renderSelectedPets() {
 }
 
 function scoreTeam(selectedPets, playstyle) {
-  // Placeholder scoring:
-  // - +1 per pet
-  // - +2 if any pet has tag 'aoe' and playstyle is aoe_far
-  // - +2 if any pet has tag 'single_target' and playstyle is single_target
-  // This is where you plug your real Outlands rules.
-  let score = selectedPets.length;
+  let score = 0;
+  let slots = 0;
+  const teamTags = new Set();
 
-  const allTags = new Set(
-    selectedPets.flatMap(p => Array.isArray(p.tags) ? p.tags : [])
-  );
+  selectedPets.forEach(p => {
+    slots += p.slots || 0;
+    (p.tags || []).forEach(t => teamTags.add(t));
+    score += (p.underdogScalar || 1) * ((p.minDmg || 0) + (p.maxDmg || 0)) / 2;
+  });
 
-  if (playstyle === "aoe_far" && allTags.has("aoe")) {
-    score += 2;
+  if (slots > 5) score -= 50;
+
+  if (playstyle === "aoe_far") {
+    if (teamTags.has("aoe")) score += 40;
+    if (teamTags.has("ranged_friendly") || teamTags.has("spell")) score += 20;
+  } else if (playstyle === "single_target") {
+    if (teamTags.has("single_target") || teamTags.has("bleed")) score += 40;
+  } else {
+    if (teamTags.has("tank") && teamTags.has("attack")) score += 30;
   }
-  if (playstyle === "single_target" && allTags.has("single_target")) {
-    score += 2;
-  }
 
-  return score;
+  return Math.round(score);
 }
 
 function recommendBestiary(selectedPets, playstyle) {
-  // Placeholder: score Bestiary pages based on matching tags.
-  // Example:
-  // - +1 if page has tag 'attack' and there is at least one Attack pet
-  // - +1 if page has 'aoe' and playstyle is aoe_far or team has aoe tag
-  // - +1 if page has 'single_target' and playstyle is single_target
-  // - +1 if page is 'ranged_friendly' and playstyle is aoe_far
-  const hasAttackPet = selectedPets.some(p => p.role === "Attack");
-  const allTags = new Set(
-    selectedPets.flatMap(p => Array.isArray(p.tags) ? p.tags : [])
-  );
+  const teamTags = new Set();
+  let followers = selectedPets.length;
+  let hasBleed = false;
 
-  const scored = bestiary.map(page => {
-    let score = 0;
-    const tags = new Set(page.tags || []);
+  selectedPets.forEach(p => {
+    (p.tags || []).forEach(t => teamTags.add(t));
+    if ((p.passiveAbility || "").toLowerCase().includes("bleed")) hasBleed = true;
+    if ((p.cooldownAbility || "").toLowerCase().includes("barrage") ||
+        (p.cooldownAbility || "").toLowerCase().includes("breath")) {
+      teamTags.add("aoe");
+    }
+  });
 
-    if (tags.has("attack") && hasAttackPet) score += 1;
-    if (tags.has("aoe") && (playstyle === "aoe_far" || allTags.has("aoe"))) score += 1;
-    if (tags.has("single_target") && playstyle === "single_target") score += 1;
-    if (tags.has("ranged_friendly") && playstyle === "aoe_far") score += 1;
-    if (tags.has("tank") && selectedPets.some(p => p.role === "Tank")) score += 1;
+  const scored = bestiaryAttack.map(trait => {
+    let s = 0;
+    const tags = trait.tags || [];
+    const c = trait.conditions || {};
 
-    return { page, score };
+    if (tags.includes("damage_buff")) s += 10;
+    if (tags.includes("healing_buff")) s += 5;
+
+    if (tags.includes("bleed_synergy") && (hasBleed || teamTags.has("bleed"))) s += 25;
+    if (tags.includes("follower_count_scaling") && followers >= (c.minFollowers || 2)) s += 20;
+
+    if (playstyle === "aoe_far") {
+      if (tags.includes("ranged_friendly")) s += 20;
+      if (teamTags.has("aoe")) s += 15;
+    } else if (playstyle === "single_target") {
+      if (tags.includes("crit_synergy") || tags.includes("single_target_synergy")) s += 15;
+    } else {
+      if (tags.includes("tank_synergy") && teamTags.has("tank")) s += 10;
+    }
+
+    if (c.preferredRange === "ranged" && playstyle === "aoe_far") s += 8;
+    if (c.preferredRange === "melee" && playstyle !== "aoe_far") s += 5;
+
+    return { trait, score: s };
   });
 
   scored.sort((a, b) => b.score - a.score);
@@ -132,7 +150,6 @@ function runRecommendations() {
   const teamScore = scoreTeam(selectedPets, playstyle);
   const bestiarySuggestions = recommendBestiary(selectedPets, playstyle);
 
-  // Team block
   const teamBlock = document.createElement("div");
   teamBlock.className = "result-block";
   const names = selectedPets.map(p => p.name).join(", ");
@@ -140,11 +157,10 @@ function runRecommendations() {
   teamBlock.innerHTML = `
     <div class="result-title">Selected Team</div>
     <div class="result-subtitle">${names}</div>
-    <div>Team score (placeholder): <strong>${teamScore}</strong></div>
+    <div>Team score: <strong>${teamScore}</strong></div>
   `;
   resultsEl.appendChild(teamBlock);
 
-  // Bestiary block
   const bestiaryBlock = document.createElement("div");
   bestiaryBlock.className = "result-block";
 
@@ -153,16 +169,16 @@ function runRecommendations() {
     .map(
       s => `
         <li>
-          <strong>${s.page.name}</strong>
+          <strong>${s.trait.name}</strong>
           (score ${s.score})<br/>
-          <span>${s.page.description || ""}</span>
+          <span>${s.trait.description || ""}</span>
         </li>
       `
     )
     .join("");
 
   bestiaryBlock.innerHTML = `
-    <div class="result-title">Bestiary Suggestions</div>
+    <div class="result-title">Attack Bestiary Suggestions</div>
     <div class="result-subtitle">Top pages for this team & playstyle</div>
     <ul>${listItems}</ul>
   `;
