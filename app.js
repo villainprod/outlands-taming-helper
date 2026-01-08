@@ -1,3 +1,4 @@
+
 let pets = [];
 let bestiaryAttack = [];
 let selectedPetIds = [];
