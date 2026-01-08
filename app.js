@@ -344,7 +344,6 @@ function runRecommendations() {
       ? teamRecommendations.map(r => r.pet.name).join(", ")
       : "No additional pets suggested (team already at or near 5 slots).";
 
-  // Determine which class trees are actually present
   const teamClasses = new Set(selectedPets.map(p => p.class));
   const hasAttack = teamClasses.has("Attack");
   const hasTank = teamClasses.has("Tank");
