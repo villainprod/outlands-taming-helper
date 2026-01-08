@@ -1,0 +1,182 @@
+[
+  {
+    "id": "ambush",
+    "name": "Ambush",
+    "tree": "Attack",
+    "description": "Damage Dealt increased by (10%, 20%, 30%) and Damage Resistance by (5% / 10% / 15%) for 10 seconds after exiting Stealth (including on Backstab). Damage Dealt increased by (4% / 8% / 12%) if creature does not have Stealth.",
+    "tags": ["damage_buff", "defense_buff", "stealth_synergy", "melee_friendly"],
+    "conditions": {
+      "requiresStealth": true,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "melee",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "cornered",
+    "name": "Cornered",
+    "tree": "Attack",
+    "description": "Damage Dealt increased by (10%, 20%, 30%) if follower has taken damage from another creature within the last 10 seconds. Damage Dealt increased by (4% / 8% / 12%) if follower has not taken damage from another creature within the last 10 seconds.",
+    "tags": ["damage_buff", "tank_synergy"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "any",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "feed",
+    "name": "Feed",
+    "tree": "Attack",
+    "description": "If creature has a Bleed effect on target, Melee Attacks have a (10% / 20% / 30%) chance to restore 10% of Max Health (up to once every 15 seconds). Damage Dealt increased by (4%, 8%, 12%) if target cannot inflict Bleed effects.",
+    "tags": ["lifesteal", "bleed_synergy", "melee_friendly"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": true,
+      "preferredRange": "melee",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "feral",
+    "name": "Feral",
+    "tree": "Attack",
+    "description": "While Frenzied or Enraged, creature's first non-backstab Melee Attack every 15 seconds has its Damage increased by (80% / 160% / 240%). Damage Dealt increased by (4%, 8%, 12%) if creature does not have either of those abilities.",
+    "tags": ["damage_buff", "frenzy_synergy", "melee_friendly"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "melee",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "hunting_party",
+    "name": "Hunting Party",
+    "tree": "Attack",
+    "description": "Damage Dealt increased by (10% / 20% / 30%) if creature and Tamer are both within 1 tile of target. Damage Dealt increased by (4% / 8% / 12%) if creature or Tamer are more than 1 tile from target.",
+    "tags": ["damage_buff", "close_range_synergy"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "melee",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "immolate",
+    "name": "Immolate",
+    "tree": "Attack",
+    "description": "Flamestrike and Spellburn abilities now have Damage increased by (50% / 100% / 150%). Damage Dealt increased by (4% / 8% / 12%) if creature does not have either of those abilities.",
+    "tags": ["damage_buff", "spell_synergy", "fire_synergy"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "any",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "lethality",
+    "name": "Lethality",
+    "tree": "Attack",
+    "description": "Melee Attacks and Spellcasts have a (10% / 20% / 30%) chance to inflict +100% Damage, otherwise will inflict (4% / 8% / 12%) additional Damage.",
+    "tags": ["damage_buff", "crit_synergy"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "any",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "menagerie",
+    "name": "Menagerie",
+    "tree": "Attack",
+    "description": "Damage Dealt increased by ((2% / 4% / 6%) * Different Types of Followers Controlled By Player). Healing Amounts increased by ((2% / 4% / 6%) * Different Types of Followers Controlled By Player).",
+    "tags": ["damage_buff", "healing_buff", "follower_type_scaling"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "any",
+      "minFollowers": 2
+    }
+  },
+  {
+    "id": "mutation",
+    "name": "Mutation",
+    "tree": "Attack",
+    "description": "Reduces cooldown length of Cooldown Abilities by (2 / 4 / 6) seconds. Damage Dealt increased by (4% / 8% / 12%) if creature does not have a Cooldown Ability.",
+    "tags": ["cooldown_synergy", "damage_buff"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "any",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "pelt",
+    "name": "Pelt",
+    "tree": "Attack",
+    "description": "Damage Dealt increased by (8% / 16% / 24%) if target is 4 tiles away or more. Damage Dealt increased by (4% / 8% / 12%) if target is within 3 tiles.",
+    "tags": ["damage_buff", "ranged_friendly"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "ranged",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "primal",
+    "name": "Primal",
+    "tree": "Attack",
+    "description": "Chance to trigger Passive Abilities increased by (33% / 66% / 100%) of normal. Damage Dealt increased by (4% / 8% / 12%) if creature does not have a Passive Ability.",
+    "tags": ["passive_synergy", "damage_buff"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "any",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "swarm",
+    "name": "Swarm",
+    "tree": "Attack",
+    "description": "Damage Dealt increased by ((2% / 4% / 6%) * Total Followers Controlled By Player). Healing Amounts increased by ((2% / 4% / 6%) * Total Followers Controlled By Player).",
+    "tags": ["damage_buff", "healing_buff", "follower_count_scaling"],
+    "conditions": {
+      "requiresStealth": false,
+      "requiresCooldown": false,
+      "requiresPassive": false,
+      "requiresBleed": false,
+      "preferredRange": "any",
+      "minFollowers": 2
+    }
+  }
+]
