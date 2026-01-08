@@ -346,6 +346,8 @@ function runRecommendations() {
   0
 );
 
+  const teamClasses = new Set(selectedPets.map(p => p.class));
+
 
 
   const teamScore = scoreTeam(selectedPets, playstyle);
@@ -355,9 +357,22 @@ function runRecommendations() {
       ? teamRecommendations.map(r => r.pet.name).join(", ")
       : "No additional pets suggested (team already at or near 5 slots).";
 
-  const attackSuggestions = recommendBestiaryAttack(selectedPets, playstyle);
-  const tankSuggestions = recommendBestiaryTank(selectedPets, playstyle);
-  const utilitySuggestions = recommendBestiaryUtility(selectedPets, playstyle);
+  const hasAttack = teamClasses.has("Attack");
+  const hasTank = teamClasses.has("Tank");
+  const hasUtility = teamClasses.has("Utility");
+
+  const attackSuggestions = hasAttack
+    ? recommendBestiaryAttack(selectedPets, playstyle)
+    : [];
+
+  const tankSuggestions = hasTank
+    ? recommendBestiaryTank(selectedPets, playstyle)
+    : [];
+
+    const utilitySuggestions = hasUtility
+    ? recommendBestiaryUtility(selectedPets, playstyle)
+    : [];
+
 
   const teamBlock = document.createElement("div");
   teamBlock.className = "result-block";
@@ -374,6 +389,7 @@ function runRecommendations() {
   `;
   resultsEl.appendChild(teamBlock);
 
+  if (attackSuggestions.length > 0) {
   const attackBlock = document.createElement("div");
   attackBlock.className = "result-block";
   const attackItems = attackSuggestions
@@ -394,7 +410,9 @@ function runRecommendations() {
     <ul>${attackItems}</ul>
   `;
   resultsEl.appendChild(attackBlock);
+  }
 
+  if (tankSuggestions.length > 0) {
   const tankBlock = document.createElement("div");
   tankBlock.className = "result-block";
   const tankItems = tankSuggestions
@@ -415,7 +433,9 @@ function runRecommendations() {
     <ul>${tankItems}</ul>
   `;
   resultsEl.appendChild(tankBlock);
+  }
 
+  if (utilitySuggestions.length > 0) {
   const utilityBlock = document.createElement("div");
   utilityBlock.className = "result-block";
   const utilityItems = utilitySuggestions
@@ -436,6 +456,7 @@ function runRecommendations() {
     <ul>${utilityItems}</ul>
   `;
   resultsEl.appendChild(utilityBlock);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
