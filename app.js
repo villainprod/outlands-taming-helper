@@ -2,8 +2,14 @@ let pets = [];
 let bestiaryAttack = [];
 let bestiaryTank = [];
 let bestiaryUtility = [];
-//let selectedPetIds = [];
 let selectedPetsSelection = [];
+
+// Helper: choose 1, 3, or 6 points for a trait based on its synergy score
+function recommendRank(score) {
+  if (score >= 30) return 6;
+  if (score >= 15) return 3;
+  return 1;
+}
 
 async function loadData() {
   const petsRes = await fetch("pets.json");
@@ -31,6 +37,7 @@ function populatePetSelect() {
     select.appendChild(opt);
   });
 }
+
 function addSelectedPet() {
   const select = document.getElementById("pet-select");
   const petId = select.value;
@@ -61,18 +68,6 @@ function addSelectedPet() {
   renderSelectedPets();
 }
 
-function recommendRank(score) {
-  if (score >= 30) return 6;
-  if (score >= 15) return 3;
-  return 1;
-}
-
-
-function removePet(index) {
-  selectedPetsSelection.splice(index, 1);
-  renderSelectedPets();
-}
-
 function clearSelectedPets() {
   selectedPetsSelection = [];
   renderSelectedPets();
@@ -81,7 +76,10 @@ function clearSelectedPets() {
   resultsEl.innerHTML = "";
 }
 
-
+function removePet(index) {
+  selectedPetsSelection.splice(index, 1);
+  renderSelectedPets();
+}
 
 function renderSelectedPets() {
   const container = document.getElementById("selected-pets");
@@ -100,14 +98,6 @@ function renderSelectedPets() {
     container.appendChild(pill);
   });
 }
-
-function recommendRank(score) {
-  if (score >= 30) return 6;
-  if (score >= 15) return 3;
-  return 1;
-}
-
-
 
 function scoreTeam(selectedPets, playstyle) {
   let score = 0;
@@ -230,7 +220,6 @@ function recommendBestiaryAttack(selectedPets, playstyle) {
     } else {
       if (tags.includes("tank_synergy") && teamTags.has("tank")) s += 10;
     }
-    
 
     if (c.preferredRange === "ranged" && playstyle === "aoe_far") s += 8;
     if (c.preferredRange === "melee" && playstyle !== "aoe_far") s += 5;
@@ -321,6 +310,7 @@ function recommendBestiaryUtility(selectedPets, playstyle) {
     if (c.preferredRange === "ranged" && playstyle === "aoe_far") s += 5;
 
     const rank = recommendRank(s);
+
     return { trait, score: s, rank };
   });
 
@@ -333,30 +323,29 @@ function runRecommendations() {
   resultsEl.innerHTML = "";
 
   if (selectedPetsSelection.length === 0) {
-  resultsEl.textContent = "Select at least one pet.";
-  return;
-}
+    resultsEl.textContent = "Select at least one pet.";
+    return;
+  }
 
   const playstyle = document.getElementById("playstyle").value;
   const selectedPets = selectedPetsSelection
-  .map(sel => pets.find(p => p.id === sel.id))
-  .filter(Boolean);
-  const totalSlotsUsed = selectedPets.reduce(
-  (sum, p) => sum + (p.slots || 0),
-  0
-);
-
-  const teamClasses = new Set(selectedPets.map(p => p.class));
-
-
+    .map(sel => pets.find(p => p.id === sel.id))
+    .filter(Boolean);
 
   const teamScore = scoreTeam(selectedPets, playstyle);
+  const totalSlotsUsed = selectedPets.reduce(
+    (sum, p) => sum + (p.slots || 0),
+    0
+  );
+
   const teamRecommendations = recommendTeam(selectedPets, playstyle);
   const recommendedNames =
     teamRecommendations.length > 0
       ? teamRecommendations.map(r => r.pet.name).join(", ")
       : "No additional pets suggested (team already at or near 5 slots).";
 
+  // Determine which class trees are actually present
+  const teamClasses = new Set(selectedPets.map(p => p.class));
   const hasAttack = teamClasses.has("Attack");
   const hasTank = teamClasses.has("Tank");
   const hasUtility = teamClasses.has("Utility");
@@ -364,15 +353,12 @@ function runRecommendations() {
   const attackSuggestions = hasAttack
     ? recommendBestiaryAttack(selectedPets, playstyle)
     : [];
-
   const tankSuggestions = hasTank
     ? recommendBestiaryTank(selectedPets, playstyle)
     : [];
-
-    const utilitySuggestions = hasUtility
+  const utilitySuggestions = hasUtility
     ? recommendBestiaryUtility(selectedPets, playstyle)
     : [];
-
 
   const teamBlock = document.createElement("div");
   teamBlock.className = "result-block";
@@ -390,72 +376,72 @@ function runRecommendations() {
   resultsEl.appendChild(teamBlock);
 
   if (attackSuggestions.length > 0) {
-  const attackBlock = document.createElement("div");
-  attackBlock.className = "result-block";
-  const attackItems = attackSuggestions
-    .slice(0, 5)
-    .map(
-      s => `
-        <li>
-          <strong>${s.trait.name}</strong>
-          (score ${s.score}, <strong>${s.rank} pts</strong>)<br/>
-          <span>${s.trait.description || ""}</span>
-        </li>
-      `
-    )
-    .join("");
-  attackBlock.innerHTML = `
-    <div class="result-title">Attack Bestiary Suggestions</div>
-    <div class="result-subtitle">Top Attack pages for this team & playstyle</div>
-    <ul>${attackItems}</ul>
-  `;
-  resultsEl.appendChild(attackBlock);
+    const attackBlock = document.createElement("div");
+    attackBlock.className = "result-block";
+    const attackItems = attackSuggestions
+      .slice(0, 5)
+      .map(
+        s => `
+          <li>
+            <strong>${s.trait.name}</strong>
+            (score ${s.score}, <strong>${s.rank} pts</strong>)<br/>
+            <span>${s.trait.description || ""}</span>
+          </li>
+        `
+      )
+      .join("");
+    attackBlock.innerHTML = `
+      <div class="result-title">Attack Bestiary Suggestions</div>
+      <div class="result-subtitle">Top Attack pages for this team & playstyle</div>
+      <ul>${attackItems}</ul>
+    `;
+    resultsEl.appendChild(attackBlock);
   }
 
   if (tankSuggestions.length > 0) {
-  const tankBlock = document.createElement("div");
-  tankBlock.className = "result-block";
-  const tankItems = tankSuggestions
-    .slice(0, 5)
-    .map(
-      s => `
-        <li>
-          <strong>${s.trait.name}</strong>
-          (score ${s.score},<strong>${s.rank} pts</strong>)
-          <span>${s.trait.description || ""}</span>
-        </li>
-      `
-    )
-    .join("");
-  tankBlock.innerHTML = `
-    <div class="result-title">Tank Bestiary Suggestions</div>
-    <div class="result-subtitle">Top Tank pages for this team & playstyle</div>
-    <ul>${tankItems}</ul>
-  `;
-  resultsEl.appendChild(tankBlock);
+    const tankBlock = document.createElement("div");
+    tankBlock.className = "result-block";
+    const tankItems = tankSuggestions
+      .slice(0, 5)
+      .map(
+        s => `
+          <li>
+            <strong>${s.trait.name}</strong>
+            (score ${s.score}, <strong>${s.rank} pts</strong>)<br/>
+            <span>${s.trait.description || ""}</span>
+          </li>
+        `
+      )
+      .join("");
+    tankBlock.innerHTML = `
+      <div class="result-title">Tank Bestiary Suggestions</div>
+      <div class="result-subtitle">Top Tank pages for this team & playstyle</div>
+      <ul>${tankItems}</ul>
+    `;
+    resultsEl.appendChild(tankBlock);
   }
 
   if (utilitySuggestions.length > 0) {
-  const utilityBlock = document.createElement("div");
-  utilityBlock.className = "result-block";
-  const utilityItems = utilitySuggestions
-    .slice(0, 5)
-    .map(
-      s => `
-        <li>
-          <strong>${s.trait.name}</strong>
-          (score ${s.score},<strong>${s.rank} pts</strong>)<br/>
-          <span>${s.trait.description || ""}</span>
-        </li>
-      `
-    )
-    .join("");
-  utilityBlock.innerHTML = `
-    <div class="result-title">Utility Bestiary Suggestions</div>
-    <div class="result-subtitle">Top Utility pages for this team & playstyle</div>
-    <ul>${utilityItems}</ul>
-  `;
-  resultsEl.appendChild(utilityBlock);
+    const utilityBlock = document.createElement("div");
+    utilityBlock.className = "result-block";
+    const utilityItems = utilitySuggestions
+      .slice(0, 5)
+      .map(
+        s => `
+          <li>
+            <strong>${s.trait.name}</strong>
+            (score ${s.score}, <strong>${s.rank} pts</strong>)<br/>
+            <span>${s.trait.description || ""}</span>
+          </li>
+        `
+      )
+      .join("");
+    utilityBlock.innerHTML = `
+      <div class="result-title">Utility Bestiary Suggestions</div>
+      <div class="result-subtitle">Top Utility pages for this team & playstyle</div>
+      <ul>${utilityItems}</ul>
+    `;
+    resultsEl.appendChild(utilityBlock);
   }
 }
 
@@ -466,9 +452,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("add-pet-btn")
     .addEventListener("click", addSelectedPet);
 
-  document
-    .getElementById("clear-pets-btn")
-    .addEventListener("click", clearSelectedPets);
+  const clearBtn = document.getElementById("clear-pets-btn");
+  if (clearBtn) {
+    clearBtn.addEventListener("click", clearSelectedPets);
+  }
 
   document
     .getElementById("run-btn")
