@@ -66,6 +66,16 @@ function removePet(index) {
   renderSelectedPets();
 }
 
+function clearSelectedPets() {
+  selectedPetsSelection = [];
+  renderSelectedPets();
+
+  const resultsEl = document.getElementById("results");
+  resultsEl.innerHTML = "";
+}
+
+
+
 function renderSelectedPets() {
   const container = document.getElementById("selected-pets");
   container.innerHTML = "";
@@ -311,6 +321,11 @@ function runRecommendations() {
   const selectedPets = selectedPetsSelection
   .map(sel => pets.find(p => p.id === sel.id))
   .filter(Boolean);
+  const totalSlotsUsed = selectedPets.reduce(
+  (sum, p) => sum + (p.slots || 0),
+  0
+);
+
 
 
   const teamScore = scoreTeam(selectedPets, playstyle);
@@ -332,6 +347,7 @@ function runRecommendations() {
     <div class="result-title">Selected Team</div>
     <div class="result-subtitle">${names}</div>
     <div>Team score: <strong>${teamScore}</strong></div>
+    <div>Slots used: <strong>${totalSlotsUsed} / 5</strong></div>
     <div style="margin-top:0.5rem;">
       <strong>Suggested additions:</strong> ${recommendedNames}
     </div>
@@ -408,6 +424,10 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("add-pet-btn")
     .addEventListener("click", addSelectedPet);
+
+  document
+    .getElementById("clear-pets-btn")
+    .addEventListener("click", clearSelectedPets);
 
   document
     .getElementById("run-btn")
