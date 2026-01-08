@@ -36,15 +36,15 @@ function addSelectedPet() {
   const petId = select.value;
   if (!petId) return;
 
-  if (selectedPetIds.includes(petId)) return;
   if (selectedPetIds.length >= 5) {
-    alert("You can select at most 5 pets.");
+    alert("You can select at most 5 pets in the picker (slot cap is still enforced separately).");
     return;
   }
 
   selectedPetIds.push(petId);
   renderSelectedPets();
 }
+
 
 function removePet(petId) {
   selectedPetIds = selectedPetIds.filter(id => id !== petId);
