@@ -61,6 +61,13 @@ function addSelectedPet() {
   renderSelectedPets();
 }
 
+function recommendRank(score) {
+  if (score >= 30) return 6;
+  if (score >= 15) return 3;
+  return 1;
+}
+
+
 function removePet(index) {
   selectedPetsSelection.splice(index, 1);
   renderSelectedPets();
@@ -93,6 +100,13 @@ function renderSelectedPets() {
     container.appendChild(pill);
   });
 }
+
+function recommendRank(score) {
+  if (score >= 30) return 6;
+  if (score >= 15) return 3;
+  return 1;
+}
+
 
 
 function scoreTeam(selectedPets, playstyle) {
@@ -216,11 +230,14 @@ function recommendBestiaryAttack(selectedPets, playstyle) {
     } else {
       if (tags.includes("tank_synergy") && teamTags.has("tank")) s += 10;
     }
+    
 
     if (c.preferredRange === "ranged" && playstyle === "aoe_far") s += 8;
     if (c.preferredRange === "melee" && playstyle !== "aoe_far") s += 5;
 
-    return { trait, score: s };
+    const rank = recommendRank(s);
+
+    return { trait, score: s, rank };
   });
 
   scored.sort((a, b) => b.score - a.score);
@@ -256,7 +273,9 @@ function recommendBestiaryTank(selectedPets, playstyle) {
       if (c.preferredRange === "melee") s += 5;
     }
 
-    return { trait, score: s };
+    const rank = recommendRank(s);
+
+    return { trait, score: s, rank };
   });
 
   scored.sort((a, b) => b.score - a.score);
@@ -301,7 +320,8 @@ function recommendBestiaryUtility(selectedPets, playstyle) {
     if (c.preferredRange === "melee" && playstyle !== "aoe_far") s += 5;
     if (c.preferredRange === "ranged" && playstyle === "aoe_far") s += 5;
 
-    return { trait, score: s };
+    const rank = recommendRank(s);
+    return { trait, score: s, rank };
   });
 
   scored.sort((a, b) => b.score - a.score);
@@ -362,7 +382,7 @@ function runRecommendations() {
       s => `
         <li>
           <strong>${s.trait.name}</strong>
-          (score ${s.score})<br/>
+          (score ${s.score}, <strong>${s.rank} pts</strong>)<br/>
           <span>${s.trait.description || ""}</span>
         </li>
       `
@@ -383,7 +403,7 @@ function runRecommendations() {
       s => `
         <li>
           <strong>${s.trait.name}</strong>
-          (score ${s.score})<br/>
+          (score ${s.score},<strong>${s.rank} pts</strong>)
           <span>${s.trait.description || ""}</span>
         </li>
       `
@@ -404,7 +424,7 @@ function runRecommendations() {
       s => `
         <li>
           <strong>${s.trait.name}</strong>
-          (score ${s.score})<br/>
+          (score ${s.score},<strong>${s.rank} pts</strong>)<br/>
           <span>${s.trait.description || ""}</span>
         </li>
       `
