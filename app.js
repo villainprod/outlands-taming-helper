@@ -1,13 +1,21 @@
 let pets = [];
 let bestiaryAttack = [];
+let bestiaryTank = [];
+let bestiaryUtility = [];
 let selectedPetIds = [];
 
 async function loadData() {
   const petsRes = await fetch("pets.json");
   pets = await petsRes.json();
 
-  const bestiaryRes = await fetch("bestiary_attack.json");
-  bestiaryAttack = await bestiaryRes.json();
+  const attackRes = await fetch("bestiary_attack.json");
+  bestiaryAttack = await attackRes.json();
+
+  const tankRes = await fetch("bestiary_tank.json");
+  bestiaryTank = await tankRes.json();
+
+  const utilityRes = await fetch("bestiary_utility.json");
+  bestiaryUtility = await utilityRes.json();
 
   populatePetSelect();
 }
@@ -152,7 +160,7 @@ function recommendTeam(selectedPets, playstyle) {
   return picked;
 }
 
-function recommendBestiary(selectedPets, playstyle) {
+function recommendBestiaryAttack(selectedPets, playstyle) {
   const teamTags = new Set();
   let followers = selectedPets.length;
   let hasBleed = false;
@@ -196,6 +204,87 @@ function recommendBestiary(selectedPets, playstyle) {
   return scored;
 }
 
+function recommendBestiaryTank(selectedPets, playstyle) {
+  const followers = selectedPets.length;
+  const teamTags = new Set();
+  let totalTankSlots = 0;
+
+  selectedPets.forEach(p => {
+    (p.tags || []).forEach(t => teamTags.add(t));
+    if (p.class === "Tank") totalTankSlots += p.slots || 0;
+  });
+
+  const scored = bestiaryTank.map(trait => {
+    let s = 0;
+    const tags = trait.tags || [];
+    const c = trait.conditions || {};
+
+    if (tags.includes("defense_buff")) s += 12;
+    if (tags.includes("debuff_resist")) s += 8;
+    if (tags.includes("party_shield")) s += 10;
+    if (tags.includes("damage_redirect")) s += 10;
+
+    if (tags.includes("big_pet_synergy") && totalTankSlots >= (c.minSlots || 3)) s += 8;
+    if (followers >= (c.minFollowers || 0)) s += 2;
+
+    if (playstyle === "aoe_far") {
+      if (c.preferredRange === "melee") s += 3;
+    } else {
+      if (c.preferredRange === "melee") s += 5;
+    }
+
+    return { trait, score: s };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  return scored;
+}
+
+function recommendBestiaryUtility(selectedPets, playstyle) {
+  const teamTags = new Set();
+  let followers = selectedPets.length;
+  let hasPoisonOrDisease = false;
+  let hasChill = false;
+
+  selectedPets.forEach(p => {
+    (p.tags || []).forEach(t => teamTags.add(t));
+    const pass = (p.passiveAbility || "").toLowerCase();
+    const cd = (p.cooldownAbility || "").toLowerCase();
+
+    if (pass.includes("poison") || pass.includes("disease") || cd.includes("poison") || cd.includes("disease")) {
+      hasPoisonOrDisease = true;
+    }
+    if (pass.includes("chill") || cd.includes("chill")) {
+      hasChill = true;
+    }
+  });
+
+  const scored = bestiaryUtility.map(trait => {
+    let s = 0;
+    const tags = trait.tags || [];
+    const c = trait.conditions || {};
+
+    if (tags.includes("damage_buff")) s += 10;
+    if (tags.includes("tamer_damage_buff")) s += 8;
+    if (tags.includes("lifesteal")) s += 6;
+
+    if (tags.includes("poison_synergy") || tags.includes("disease_synergy")) {
+      if (hasPoisonOrDisease || c.requiresPoisonOrDisease) s += 15;
+    }
+    if (tags.includes("chill_synergy") && (hasChill || c.requiresChill)) s += 12;
+
+    if (followers >= (c.minFollowers || 0)) s += 2;
+
+    if (c.preferredRange === "melee" && playstyle !== "aoe_far") s += 5;
+    if (c.preferredRange === "ranged" && playstyle === "aoe_far") s += 5;
+
+    return { trait, score: s };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  return scored;
+}
+
 function runRecommendations() {
   const resultsEl = document.getElementById("results");
   resultsEl.innerHTML = "";
@@ -217,7 +306,9 @@ function runRecommendations() {
       ? teamRecommendations.map(r => r.pet.name).join(", ")
       : "No additional pets suggested (team already at or near 5 slots).";
 
-  const bestiarySuggestions = recommendBestiary(selectedPets, playstyle);
+  const attackSuggestions = recommendBestiaryAttack(selectedPets, playstyle);
+  const tankSuggestions = recommendBestiaryTank(selectedPets, playstyle);
+  const utilitySuggestions = recommendBestiaryUtility(selectedPets, playstyle);
 
   const teamBlock = document.createElement("div");
   teamBlock.className = "result-block";
@@ -233,10 +324,9 @@ function runRecommendations() {
   `;
   resultsEl.appendChild(teamBlock);
 
-  const bestiaryBlock = document.createElement("div");
-  bestiaryBlock.className = "result-block";
-
-  const listItems = bestiarySuggestions
+  const attackBlock = document.createElement("div");
+  attackBlock.className = "result-block";
+  const attackItems = attackSuggestions
     .slice(0, 5)
     .map(
       s => `
@@ -248,13 +338,54 @@ function runRecommendations() {
       `
     )
     .join("");
-
-  bestiaryBlock.innerHTML = `
+  attackBlock.innerHTML = `
     <div class="result-title">Attack Bestiary Suggestions</div>
-    <div class="result-subtitle">Top pages for this team & playstyle</div>
-    <ul>${listItems}</ul>
+    <div class="result-subtitle">Top Attack pages for this team & playstyle</div>
+    <ul>${attackItems}</ul>
   `;
-  resultsEl.appendChild(bestiaryBlock);
+  resultsEl.appendChild(attackBlock);
+
+  const tankBlock = document.createElement("div");
+  tankBlock.className = "result-block";
+  const tankItems = tankSuggestions
+    .slice(0, 5)
+    .map(
+      s => `
+        <li>
+          <strong>${s.trait.name}</strong>
+          (score ${s.score})<br/>
+          <span>${s.trait.description || ""}</span>
+        </li>
+      `
+    )
+    .join("");
+  tankBlock.innerHTML = `
+    <div class="result-title">Tank Bestiary Suggestions</div>
+    <div class="result-subtitle">Top Tank pages for this team & playstyle</div>
+    <ul>${tankItems}</ul>
+  `;
+  resultsEl.appendChild(tankBlock);
+
+  const utilityBlock = document.createElement("div");
+  utilityBlock.className = "result-block";
+  const utilityItems = utilitySuggestions
+    .slice(0, 5)
+    .map(
+      s => `
+        <li>
+          <strong>${s.trait.name}</strong>
+          (score ${s.score})<br/>
+          <span>${s.trait.description || ""}</span>
+        </li>
+      `
+    )
+    .join("");
+  utilityBlock.innerHTML = `
+    <div class="result-title">Utility Bestiary Suggestions</div>
+    <div class="result-subtitle">Top Utility pages for this team & playstyle</div>
+    <ul>${utilityItems}</ul>
+  `;
+  resultsEl.appendChild(utilityBlock);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "beast_sting",
+    "name": "Beast Sting",
+    "tree": "Utility",
+    "description": "If any of your creatures has Poison or Disease active on target, increases Damage of Melee Attacks by (10% / 20% / 30%) if creature can inflict Poison or Disease effects. Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Poison or Disease effects.",
+    "tags": ["damage_buff", "poison_synergy", "disease_synergy", "melee_friendly"],
+    "conditions": {
+      "requiresPoisonOrDisease": true,
+      "preferredRange": "melee",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "carrion",
+    "name": "Carrion",
+    "tree": "Utility",
+    "description": "If creature has Disease active on target, Melee Attacks have a (10% / 20% / 30%) chance to restore 12.5% of Max Health (up to once every 15 seconds). Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Disease effects.",
+    "tags": ["lifesteal", "disease_synergy", "melee_friendly"],
+    "conditions": {
+      "requiresDisease": true,
+      "preferredRange": "melee",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "contagion",
+    "name": "Contagion",
+    "tree": "Utility",
+    "description": "Increases the Damage of Disease effects by (33% / 66% / 100%). Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Disease effects.",
+    "tags": ["damage_buff", "disease_synergy"],
+    "conditions": {
+      "requiresDisease": true,
+      "preferredRange": "any",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "frostbite",
+    "name": "Frostbite",
+    "tree": "Utility",
+    "description": "Damage of Chill Abilities increased by (15% / 30% / 45%) and amount of Chill effect applied increased by (33% / 66% / 100%) of normal. Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Chill effects.",
+    "tags": ["damage_buff", "chill_synergy"],
+    "conditions": {
+      "requiresChill": true,
+      "preferredRange": "any",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "metabolism",
+    "name": "Metabolism",
+    "tree": "Utility",
+    "description": "Successful Melee Attacks will restore (0.66% / 1.33% / 2.0%) of Max Health. Damage Dealt increased by (4% / 8% / 12%) if already at Max Health.",
+    "tags": ["lifesteal", "melee_friendly"],
+    "conditions": {
+      "preferredRange": "melee",
+      "minFollowers": 0
+    }
+  },
+  {
+    "id": "toxic",
+    "name": "Toxic",
+    "tree": "Utility",
+    "description": "If any of your creatures has Poison or Disease active on target, their Tamer will receive a stackable (1% / 2% / 3%) Damage Bonus against the target for each Control Slot worth of Utility-class creatures that can inflict Poison or Disease effects. Damage Dealt increased by (4% / 8% / 12%) if creature cannot inflict Poison or Disease effects.",
+    "tags": ["damage_buff", "poison_synergy", "disease_synergy", "tamer_damage_buff"],
+    "conditions": {
+      "requiresPoisonOrDisease": true,
+      "preferredRange": "any",
+      "minFollowers": 1
+    }
+  }
+]
