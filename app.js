@@ -1,4 +1,3 @@
-
 let pets = [];
 let bestiaryAttack = [];
 let selectedPetIds = [];
@@ -153,7 +152,49 @@ function recommendTeam(selectedPets, playstyle) {
   return picked;
 }
 
+function recommendBestiary(selectedPets, playstyle) {
+  const teamTags = new Set();
+  let followers = selectedPets.length;
+  let hasBleed = false;
 
+  selectedPets.forEach(p => {
+    (p.tags || []).forEach(t => teamTags.add(t));
+    if ((p.passiveAbility || "").toLowerCase().includes("bleed")) hasBleed = true;
+    if ((p.cooldownAbility || "").toLowerCase().includes("barrage") ||
+        (p.cooldownAbility || "").toLowerCase().includes("breath")) {
+      teamTags.add("aoe");
+    }
+  });
+
+  const scored = bestiaryAttack.map(trait => {
+    let s = 0;
+    const tags = trait.tags || [];
+    const c = trait.conditions || {};
+
+    if (tags.includes("damage_buff")) s += 10;
+    if (tags.includes("healing_buff")) s += 5;
+
+    if (tags.includes("bleed_synergy") && (hasBleed || teamTags.has("bleed"))) s += 25;
+    if (tags.includes("follower_count_scaling") && followers >= (c.minFollowers || 2)) s += 20;
+
+    if (playstyle === "aoe_far") {
+      if (tags.includes("ranged_friendly")) s += 20;
+      if (teamTags.has("aoe")) s += 15;
+    } else if (playstyle === "single_target") {
+      if (tags.includes("crit_synergy") || tags.includes("single_target_synergy")) s += 15;
+    } else {
+      if (tags.includes("tank_synergy") && teamTags.has("tank")) s += 10;
+    }
+
+    if (c.preferredRange === "ranged" && playstyle === "aoe_far") s += 8;
+    if (c.preferredRange === "melee" && playstyle !== "aoe_far") s += 5;
+
+    return { trait, score: s };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  return scored;
+}
 
 function runRecommendations() {
   const resultsEl = document.getElementById("results");
@@ -171,11 +212,10 @@ function runRecommendations() {
 
   const teamScore = scoreTeam(selectedPets, playstyle);
   const teamRecommendations = recommendTeam(selectedPets, playstyle);
-  console.log("Recommended pets:", teamRecommendations);
-  const recommendedNames = teamRecommendations.length > 0
-    ? teamRecommendations.map(r => r.pet.name).join(", ")
-    : "No additional pets suggested (team already at or near 5 slots).";
-
+  const recommendedNames =
+    teamRecommendations.length > 0
+      ? teamRecommendations.map(r => r.pet.name).join(", ")
+      : "No additional pets suggested (team already at or near 5 slots).";
 
   const bestiarySuggestions = recommendBestiary(selectedPets, playstyle);
 
@@ -184,14 +224,13 @@ function runRecommendations() {
   const names = selectedPets.map(p => p.name).join(", ");
 
   teamBlock.innerHTML = `
-  <div class="result-title">Selected Team</div>
-  <div class="result-subtitle">${names}</div>
-  <div>Team score: <strong>${teamScore}</strong></div>
-  <div style="margin-top:0.5rem;">
-    <strong>Suggested additions:</strong> ${recommendedNames}
-  </div>
-`;
-
+    <div class="result-title">Selected Team</div>
+    <div class="result-subtitle">${names}</div>
+    <div>Team score: <strong>${teamScore}</strong></div>
+    <div style="margin-top:0.5rem;">
+      <strong>Suggested additions:</strong> ${recommendedNames}
+    </div>
+  `;
   resultsEl.appendChild(teamBlock);
 
   const bestiaryBlock = document.createElement("div");
