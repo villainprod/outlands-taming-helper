@@ -2,7 +2,8 @@ let pets = [];
 let bestiaryAttack = [];
 let bestiaryTank = [];
 let bestiaryUtility = [];
-let selectedPetIds = [];
+//let selectedPetIds = [];
+let selectedPetsSelection = [];
 
 async function loadData() {
   const petsRes = await fetch("pets.json");
@@ -30,24 +31,38 @@ function populatePetSelect() {
     select.appendChild(opt);
   });
 }
-
 function addSelectedPet() {
   const select = document.getElementById("pet-select");
   const petId = select.value;
   if (!petId) return;
 
-  if (selectedPetIds.length >= 5) {
-    alert("You can select at most 5 pets in the picker (slot cap is still enforced separately).");
+  const pet = pets.find(p => p.id === petId);
+  if (!pet) return;
+
+  const currentSlotsUsed = selectedPetsSelection.reduce(
+    (sum, sel) => {
+      const p = pets.find(x => x.id === sel.id);
+      return sum + (p?.slots || 0);
+    },
+    0
+  );
+
+  const petSlots = pet.slots || 0;
+  if (currentSlotsUsed + petSlots > 5) {
+    alert("Adding this pet would exceed the 5-slot limit.");
     return;
   }
 
-  selectedPetIds.push(petId);
+  selectedPetsSelection.push({
+    id: pet.id,
+    name: pet.name
+  });
+
   renderSelectedPets();
 }
 
-
-function removePet(petId) {
-  selectedPetIds = selectedPetIds.filter(id => id !== petId);
+function removePet(index) {
+  selectedPetsSelection.splice(index, 1);
   renderSelectedPets();
 }
 
@@ -55,22 +70,20 @@ function renderSelectedPets() {
   const container = document.getElementById("selected-pets");
   container.innerHTML = "";
 
-  selectedPetIds.forEach(id => {
-    const pet = pets.find(p => p.id === id);
-    if (!pet) return;
-
+  selectedPetsSelection.forEach((sel, index) => {
     const pill = document.createElement("div");
     pill.className = "pill";
-    pill.textContent = pet.name;
+    pill.textContent = sel.name;
 
     const btn = document.createElement("button");
     btn.textContent = "×";
-    btn.addEventListener("click", () => removePet(id));
+    btn.addEventListener("click", () => removePet(index));
 
     pill.appendChild(btn);
     container.appendChild(pill);
   });
 }
+
 
 function scoreTeam(selectedPets, playstyle) {
   let score = 0;
@@ -289,15 +302,16 @@ function runRecommendations() {
   const resultsEl = document.getElementById("results");
   resultsEl.innerHTML = "";
 
-  if (selectedPetIds.length === 0) {
-    resultsEl.textContent = "Select at least one pet.";
-    return;
-  }
+  if (selectedPetsSelection.length === 0) {
+  resultsEl.textContent = "Select at least one pet.";
+  return;
+}
 
   const playstyle = document.getElementById("playstyle").value;
-  const selectedPets = selectedPetIds
-    .map(id => pets.find(p => p.id === id))
-    .filter(Boolean);
+  const selectedPets = selectedPetsSelection
+  .map(sel => pets.find(p => p.id === sel.id))
+  .filter(Boolean);
+
 
   const teamScore = scoreTeam(selectedPets, playstyle);
   const teamRecommendations = recommendTeam(selectedPets, playstyle);
