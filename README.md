@@ -1,0 +1,1 @@
+This app is designed to provide recommendations on what taming beastiary abilities to take and how many points to apply when a pet team is selected. The score that is output is based on Outlands' pet stat catalog. If a pet has a synergy or is complimentary to another pet, it will see that as beneficial and score the team higher. 
