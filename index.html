@@ -188,6 +188,38 @@
       letter-spacing: 0.12em;
       color: var(--muted);
     }
+      .result-block {
+    margin-top: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(15,23,42,0.9);
+    border: 1px solid rgba(148,163,184,0.35);
+     }
+
+   .result-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 2px;
+   }
+
+  .result-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .result-block ul {
+    margin: 6px 0 0;
+    padding-left: 18px;
+    font-size: 13px;
+  }
+
+  .result-block li {
+    margin-bottom: 4px;
+  }
+
 
     pre#results {
       margin: 0;
@@ -355,8 +387,12 @@
           <h2>Recommendations</h2>
           <span>Bestiary Suggestions</span>
         </div>
-        <pre id="results"></pre>
+
+        <div id="results">
+        <!-- JS will fill these sections -->
+        </div>
       </div>
+
     </div>
   </div>
 
