@@ -1,50 +1,210 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Outlands Taming Helper by Prof Oak</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Pet Team Builder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .pet-select-block {
+      display: flex;
+      flex-direction: column;
+      width: 220px;
+    }
+    .pet-select-block label {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .pet-select-block input.pet-filter {
+      margin-bottom: 4px;
+      padding: 4px 6px;
+      font-size: 14px;
+    }
+    .pet-select-block select {
+      padding: 4px 6px;
+      font-size: 14px;
+      max-height: 180px;
+    }
+    button {
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    pre {
+      background: #f3f3f3;
+      padding: 10px;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <h1>Outlands Taming Helper by Prof Oak</h1>
-    <p>Select 1–5 pets and a playstyle to get team and Bestiary suggestions.</p>
-  </header>
+  <h1>Pet Team Builder</h1>
 
-  <main class="container">
-    <section class="card">
-      <h2>Team Setup</h2>
+  <form id="team-form">
+    <div class="team-container">
 
-      <label for="pet-select">Choose pets (1–5):</label>
-      <select id="pet-select">
-        <!-- populated by JS -->
-      </select>
-      <button id="add-pet-btn">Add Pet</button>
-      <button id="clear-pets-btn">Clear Team</button>
-      <div id="selected-pets" class="pill-container"></div>
+      <!-- Pet 1 -->
+      <div class="pet-select-block">
+        <label for="select-pet-1">Pet 1</label>
+        <input
+          type="text"
+          class="pet-filter"
+          placeholder="Filter pet..."
+          data-target="select-pet-1"
+        >
+        <select id="select-pet-1" name="pet1">
+          <option value="">-- Select a pet --</option>
+          {% for pet in pets %}
+            <option value="{{ pet.id }}">{{ pet.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
 
-      <label for="playstyle">Playstyle:</label>
-      <select id="playstyle">
-        <option value="general">General PvM</option>
-        <option value="aoe_far">AoE farm – standing 5+ tiles away</option>
-        <option value="single_target">Single target / boss</option>
-      </select>
+      <!-- Pet 2 -->
+      <div class="pet-select-block">
+        <label for="select-pet-2">Pet 2</label>
+        <input
+          type="text"
+          class="pet-filter"
+          placeholder="Filter pet..."
+          data-target="select-pet-2"
+        >
+        <select id="select-pet-2" name="pet2">
+          <option value="">-- Select a pet --</option>
+          {% for pet in pets %}
+            <option value="{{ pet.id }}">{{ pet.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
 
-      <button id="run-btn" class="primary">Recommend Team & Bestiary</button>
-    </section>
+      <!-- Pet 3 -->
+      <div class="pet-select-block">
+        <label for="select-pet-3">Pet 3</label>
+        <input
+          type="text"
+          class="pet-filter"
+          placeholder="Filter pet..."
+          data-target="select-pet-3"
+        >
+        <select id="select-pet-3" name="pet3">
+          <option value="">-- Select a pet --</option>
+          {% for pet in pets %}
+            <option value="{{ pet.id }}">{{ pet.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
 
-    <section class="card">
-      <h2>Results</h2>
-      <div id="results"></div>
-    </section>
-  </main>
+      <!-- Pet 4 -->
+      <div class="pet-select-block">
+        <label for="select-pet-4">Pet 4</label>
+        <input
+          type="text"
+          class="pet-filter"
+          placeholder="Filter pet..."
+          data-target="select-pet-4"
+        >
+        <select id="select-pet-4" name="pet4">
+          <option value="">-- Select a pet --</option>
+          {% for pet in pets %}
+            <option value="{{ pet.id }}">{{ pet.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
 
-  <footer class="footer">
-    <small>Minimal demo – plug in your real Outlands data & rules.</small>
-  </footer>
+      <!-- Pet 5 -->
+      <div class="pet-select-block">
+        <label for="select-pet-5">Pet 5</label>
+        <input
+          type="text"
+          class="pet-filter"
+          placeholder="Filter pet..."
+          data-target="select-pet-5"
+        >
+        <select id="select-pet-5" name="pet5">
+          <option value="">-- Select a pet --</option>
+          {% for pet in pets %}
+            <option value="{{ pet.id }}">{{ pet.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
 
-  <script src="app.js"></script>
+    </div>
+
+    <button type="button" id="optimize-btn">Optimize Team</button>
+  </form>
+
+  <h2>Recommendations</h2>
+  <pre id="results"></pre>
+
+  <script>
+    // --- Filter logic for all 5 selects ---
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.pet-filter').forEach(input => {
+        const targetId = input.dataset.target;
+        const select = document.getElementById(targetId);
+        if (!select) return;
+
+        // Cache original options
+        const allOptions = Array.from(select.options);
+
+        input.addEventListener('input', () => {
+          const term = input.value.toLowerCase().trim();
+          // Clear current options
+          select.innerHTML = '';
+          let toShow;
+
+          if (!term) {
+            // Show all original options if filter is empty
+            toShow = allOptions;
+          } else {
+            toShow = allOptions.filter(o =>
+              o.text.toLowerCase().includes(term) || o.value.toLowerCase().includes(term)
+            );
+          }
+
+          toShow.forEach(o => select.appendChild(o));
+        });
+      });
+
+      // --- Example hook-up to your /api/team/optimize endpoint ---
+      const btn = document.getElementById('optimize-btn');
+      const resultsEl = document.getElementById('results');
+
+      btn.addEventListener('click', async () => {
+        const ids = [
+          document.getElementById('select-pet-1').value,
+          document.getElementById('select-pet-2').value,
+          document.getElementById('select-pet-3').value,
+          document.getElementById('select-pet-4').value,
+          document.getElementById('select-pet-5').value
+        ].filter(v => v); // remove empty
+
+        // Build payload; you can adjust to your backend format
+        const payload = {
+          pets: ids.map(id => ({ id }))
+        };
+
+        try {
+          const res = await fetch('/api/team/optimize', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json();
+          resultsEl.textContent = JSON.stringify(data, null, 2);
+        } catch (e) {
+          resultsEl.textContent = 'Error calling /api/team/optimize: ' + e;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
