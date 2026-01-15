@@ -24,51 +24,114 @@ async function loadData() {
   const utilityRes = await fetch("bestiary_utility.json");
   bestiaryUtility = await utilityRes.json();
 
-  populatePetSelect();
+  populatePetSelects();
 }
 
-function populatePetSelect() {
-  const select = document.getElementById("pet-select");
-  select.innerHTML = "";
-  pets.forEach(pet => {
-    const opt = document.createElement("option");
-    opt.value = pet.id;
-    opt.textContent = pet.name;
-    select.appendChild(opt);
+/**
+ * Populate all 5 select elements with the full pet list.
+ * HTML needs:
+ *   select-pet-1 ... select-pet-5
+ *   pet-filter-1 ... pet-filter-5
+ */
+function populatePetSelects() {
+  const selectIds = [
+    "select-pet-1",
+    "select-pet-2",
+    "select-pet-3",
+    "select-pet-4",
+    "select-pet-5"
+  ];
+
+  selectIds.forEach(id => {
+    const select = document.getElementById(id);
+    if (!select) return;
+
+    // Store original options on the element so filters can use them
+    select.innerHTML = "";
+    const defaultOpt = document.createElement("option");
+    defaultOpt.value = "";
+    defaultOpt.textContent = "-- Select a pet --";
+    select.appendChild(defaultOpt);
+
+    pets.forEach(pet => {
+      const opt = document.createElement("option");
+      opt.value = pet.id;
+      opt.textContent = pet.name;
+      select.appendChild(opt);
+    });
+
+    // cache original options
+    select._allOptions = Array.from(select.options);
   });
+
+  setupPetFilters();
 }
 
-function addSelectedPet() {
-  const select = document.getElementById("pet-select");
-  const petId = select.value;
-  if (!petId) return;
+/**
+ * Attach "type to filter" behavior to each filter input.
+ * Each filter input should have id pet-filter-N and correspond to select-pet-N.
+ */
+function setupPetFilters() {
+  for (let i = 1; i <= 5; i++) {
+    const filter = document.getElementById(`pet-filter-${i}`);
+    const select = document.getElementById(`select-pet-${i}`);
+    if (!filter || !select) continue;
 
-  const pet = pets.find(p => p.id === petId);
-  if (!pet) return;
+    const allOptions = select._allOptions || Array.from(select.options);
 
-  const currentSlotsUsed = selectedPetsSelection.reduce(
-    (sum, sel) => {
-      const p = pets.find(x => x.id === sel.id);
-      return sum + (p?.slots || 0);
-    },
-    0
-  );
+    filter.addEventListener("input", () => {
+      const term = filter.value.toLowerCase().trim();
+      select.innerHTML = "";
+      let toShow;
 
-  const petSlots = pet.slots || 0;
-  if (currentSlotsUsed + petSlots > 5) {
-    alert("Adding this pet would exceed the 5-slot limit.");
-    return;
+      if (!term) {
+        toShow = allOptions;
+      } else {
+        toShow = allOptions.filter(o =>
+          o.text.toLowerCase().includes(term) ||
+          o.value.toLowerCase().includes(term)
+        );
+      }
+
+      toShow.forEach(o => select.appendChild(o));
+    });
   }
+}
 
-  selectedPetsSelection.push({
-    id: pet.id,
-    name: pet.name
-  });
+/**
+ * Instead of "add pet" button, we read the 5 select fields
+ * and rebuild selectedPetsSelection from those values.
+ */
+function buildSelectedPetsFromFields() {
+  selectedPetsSelection = [];
+
+  for (let i = 1; i <= 5; i++) {
+    const select = document.getElementById(`select-pet-${i}`);
+    if (!select) continue;
+    const petId = select.value;
+    if (!petId) continue;
+
+    const pet = pets.find(p => p.id === petId);
+    if (!pet) continue;
+
+    selectedPetsSelection.push({
+      id: pet.id,
+      name: pet.name
+    });
+  }
 
   renderSelectedPets();
 }
 
 function clearSelectedPets() {
+  // Clear selections in the dropdowns
+  for (let i = 1; i <= 5; i++) {
+    const select = document.getElementById(`select-pet-${i}`);
+    const filter = document.getElementById(`pet-filter-${i}`);
+    if (select) select.value = "";
+    if (filter) filter.value = "";
+  }
+
   selectedPetsSelection = [];
   renderSelectedPets();
 
@@ -77,12 +140,25 @@ function clearSelectedPets() {
 }
 
 function removePet(index) {
+  // For now, removing from the pills list just clears the matching select as well.
+  const removed = selectedPetsSelection[index];
   selectedPetsSelection.splice(index, 1);
+
+  // Clear that pet from any select that currently has it
+  for (let i = 1; i <= 5; i++) {
+    const select = document.getElementById(`select-pet-${i}`);
+    if (select && select.value === (removed && removed.id)) {
+      select.value = "";
+    }
+  }
+
   renderSelectedPets();
 }
 
 function renderSelectedPets() {
   const container = document.getElementById("selected-pets");
+  if (!container) return;
+
   container.innerHTML = "";
 
   selectedPetsSelection.forEach((sel, index) => {
@@ -92,6 +168,7 @@ function renderSelectedPets() {
 
     const btn = document.createElement("button");
     btn.textContent = "×";
+    btn.type = "button";
     btn.addEventListener("click", () => removePet(index));
 
     pill.appendChild(btn);
@@ -195,8 +272,10 @@ function recommendBestiaryAttack(selectedPets, playstyle) {
   selectedPets.forEach(p => {
     (p.tags || []).forEach(t => teamTags.add(t));
     if ((p.passiveAbility || "").toLowerCase().includes("bleed")) hasBleed = true;
-    if ((p.cooldownAbility || "").toLowerCase().includes("barrage") ||
-        (p.cooldownAbility || "").toLowerCase().includes("breath")) {
+    if (
+      (p.cooldownAbility || "").toLowerCase().includes("barrage") ||
+      (p.cooldownAbility || "").toLowerCase().includes("breath")
+    ) {
       teamTags.add("aoe");
     }
   });
@@ -282,7 +361,12 @@ function recommendBestiaryUtility(selectedPets, playstyle) {
     const pass = (p.passiveAbility || "").toLowerCase();
     const cd = (p.cooldownAbility || "").toLowerCase();
 
-    if (pass.includes("poison") || pass.includes("disease") || cd.includes("poison") || cd.includes("disease")) {
+    if (
+      pass.includes("poison") ||
+      pass.includes("disease") ||
+      cd.includes("poison") ||
+      cd.includes("disease")
+    ) {
       hasPoisonOrDisease = true;
     }
     if (pass.includes("chill") || cd.includes("chill")) {
@@ -319,6 +403,9 @@ function recommendBestiaryUtility(selectedPets, playstyle) {
 }
 
 function runRecommendations() {
+  // Build selectedPetsSelection from the 5 dropdowns first
+  buildSelectedPetsFromFields();
+
   const resultsEl = document.getElementById("results");
   resultsEl.innerHTML = "";
 
@@ -447,10 +534,7 @@ function runRecommendations() {
 document.addEventListener("DOMContentLoaded", () => {
   loadData();
 
-  document
-    .getElementById("add-pet-btn")
-    .addEventListener("click", addSelectedPet);
-
+  // clear button (optional)
   const clearBtn = document.getElementById("clear-pets-btn");
   if (clearBtn) {
     clearBtn.addEventListener("click", clearSelectedPets);
