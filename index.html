@@ -4,169 +4,345 @@
   <meta charset="UTF-8">
   <title>Pet Team Builder</title>
   <style>
+    :root {
+      --bg: #0f172a;          /* page background */
+      --card-bg: #0b1120;     /* panel background */
+      --accent: #38bdf8;      /* primary accent (buttons, highlights) */
+      --accent-soft: #082f49; /* soft accent background */
+      --border: #1e293b;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, var(--bg) 45%);
+      color: var(--text);
     }
-    .team-container {
+
+    .page {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 1200px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(15,23,42,0.96));
+      border-radius: 16px;
+      border: 1px solid rgba(148,163,184,0.25);
+      box-shadow:
+        0 24px 60px rgba(0,0,0,0.55),
+        0 0 0 1px rgba(15,23,42,0.9);
+      padding: 24px 28px 30px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
       gap: 16px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
+
+    .card-header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.03em;
+    }
+
+    .card-header span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
     .pet-select-block {
-      display: flex;
-      flex-direction: column;
-      width: 220px;
+      background: rgba(15,23,42,0.9);
+      border-radius: 12px;
+      padding: 10px 10px 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(15,23,42,0.7);
     }
+
     .pet-select-block label {
-      font-weight: bold;
-      margin-bottom: 4px;
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
-    .pet-select-block input.pet-filter {
-      margin-bottom: 4px;
-      padding: 4px 6px;
-      font-size: 14px;
-    }
+
+    .pet-select-block input.pet-filter,
     .pet-select-block select {
-      padding: 4px 6px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid rgba(148,163,184,0.35);
+      padding: 6px 9px;
       font-size: 14px;
-      max-height: 180px;
+      background-color: rgba(15,23,42,0.95);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
     }
-    button {
-      padding: 6px 12px;
+
+    .pet-select-block input.pet-filter {
+      margin-bottom: 6px;
+    }
+
+    .pet-select-block input.pet-filter::placeholder {
+      color: var(--muted);
+      opacity: 0.8;
+    }
+
+    .pet-select-block input.pet-filter:focus,
+    .pet-select-block select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(56,189,248,0.7);
+      background-color: rgba(15,23,42,1);
+    }
+
+    .pet-select-block select {
+      max-height: 190px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .btn-primary {
+      border: none;
+      border-radius: 999px;
+      padding: 8px 18px;
       font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #0b1120;
+      background: linear-gradient(135deg, #38bdf8, #22c55e);
       cursor: pointer;
+      box-shadow:
+        0 10px 25px rgba(34,197,94,0.4),
+        0 0 0 1px rgba(15,23,42,0.8);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
     }
-    pre {
-      background: #f3f3f3;
-      padding: 10px;
-      white-space: pre-wrap;
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+      box-shadow:
+        0 16px 30px rgba(34,197,94,0.5),
+        0 0 0 1px rgba(15,23,42,1);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow:
+        0 8px 16px rgba(34,197,94,0.35),
+        0 0 0 1px rgba(15,23,42,1);
+    }
+
+    .results-card {
+      margin-top: 6px;
+      padding: 10px 12px 12px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(56,189,248,0.4);
+    }
+
+    .results-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .results-header h2 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .results-header span {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    pre#results {
+      margin: 0;
+      background: transparent;
+      border-radius: 8px;
+      padding: 4px 0 0;
+      max-height: 260px;
+      overflow: auto;
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 18px 16px 24px;
+      }
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Pet Team Builder</h1>
-
-  <form id="team-form">
-    <div class="team-container">
-
-      <!-- Pet 1 -->
-      <div class="pet-select-block">
-        <label for="select-pet-1">Pet 1</label>
-        <input
-          type="text"
-          class="pet-filter"
-          placeholder="Filter pet..."
-          data-target="select-pet-1"
-        >
-        <select id="select-pet-1" name="pet1">
-          <option value="">-- Select a pet --</option>
-          {% for pet in pets %}
-            <option value="{{ pet.id }}">{{ pet.name }}</option>
-          {% endfor %}
-        </select>
+  <div class="page">
+    <div class="card">
+      <div class="card-header">
+        <h1>Pet Team Builder</h1>
+        <span>Type to filter, then select your pets</span>
       </div>
 
-      <!-- Pet 2 -->
-      <div class="pet-select-block">
-        <label for="select-pet-2">Pet 2</label>
-        <input
-          type="text"
-          class="pet-filter"
-          placeholder="Filter pet..."
-          data-target="select-pet-2"
-        >
-        <select id="select-pet-2" name="pet2">
-          <option value="">-- Select a pet --</option>
-          {% for pet in pets %}
-            <option value="{{ pet.id }}">{{ pet.name }}</option>
-          {% endfor %}
-        </select>
-      </div>
+      <form id="team-form">
+        <div class="team-container">
+          <!-- Pet 1 -->
+          <div class="pet-select-block">
+            <label for="select-pet-1">Pet 1</label>
+            <input
+              type="text"
+              class="pet-filter"
+              placeholder="Filter pet..."
+              data-target="select-pet-1"
+            >
+            <select id="select-pet-1" name="pet1">
+              <option value="">-- Select a pet --</option>
+              {% for pet in pets %}
+                <option value="{{ pet.id }}">{{ pet.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
 
-      <!-- Pet 3 -->
-      <div class="pet-select-block">
-        <label for="select-pet-3">Pet 3</label>
-        <input
-          type="text"
-          class="pet-filter"
-          placeholder="Filter pet..."
-          data-target="select-pet-3"
-        >
-        <select id="select-pet-3" name="pet3">
-          <option value="">-- Select a pet --</option>
-          {% for pet in pets %}
-            <option value="{{ pet.id }}">{{ pet.name }}</option>
-          {% endfor %}
-        </select>
-      </div>
+          <!-- Pet 2 -->
+          <div class="pet-select-block">
+            <label for="select-pet-2">Pet 2</label>
+            <input
+              type="text"
+              class="pet-filter"
+              placeholder="Filter pet..."
+              data-target="select-pet-2"
+            >
+            <select id="select-pet-2" name="pet2">
+              <option value="">-- Select a pet --</option>
+              {% for pet in pets %}
+                <option value="{{ pet.id }}">{{ pet.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
 
-      <!-- Pet 4 -->
-      <div class="pet-select-block">
-        <label for="select-pet-4">Pet 4</label>
-        <input
-          type="text"
-          class="pet-filter"
-          placeholder="Filter pet..."
-          data-target="select-pet-4"
-        >
-        <select id="select-pet-4" name="pet4">
-          <option value="">-- Select a pet --</option>
-          {% for pet in pets %}
-            <option value="{{ pet.id }}">{{ pet.name }}</option>
-          {% endfor %}
-        </select>
-      </div>
+          <!-- Pet 3 -->
+          <div class="pet-select-block">
+            <label for="select-pet-3">Pet 3</label>
+            <input
+              type="text"
+              class="pet-filter"
+              placeholder="Filter pet..."
+              data-target="select-pet-3"
+            >
+            <select id="select-pet-3" name="pet3">
+              <option value="">-- Select a pet --</option>
+              {% for pet in pets %}
+                <option value="{{ pet.id }}">{{ pet.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
 
-      <!-- Pet 5 -->
-      <div class="pet-select-block">
-        <label for="select-pet-5">Pet 5</label>
-        <input
-          type="text"
-          class="pet-filter"
-          placeholder="Filter pet..."
-          data-target="select-pet-5"
-        >
-        <select id="select-pet-5" name="pet5">
-          <option value="">-- Select a pet --</option>
-          {% for pet in pets %}
-            <option value="{{ pet.id }}">{{ pet.name }}</option>
-          {% endfor %}
-        </select>
-      </div>
+          <!-- Pet 4 -->
+          <div class="pet-select-block">
+            <label for="select-pet-4">Pet 4</label>
+            <input
+              type="text"
+              class="pet-filter"
+              placeholder="Filter pet..."
+              data-target="select-pet-4"
+            >
+            <select id="select-pet-4" name="pet4">
+              <option value="">-- Select a pet --</option>
+              {% for pet in pets %}
+                <option value="{{ pet.id }}">{{ pet.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
 
+          <!-- Pet 5 -->
+          <div class="pet-select-block">
+            <label for="select-pet-5">Pet 5</label>
+            <input
+              type="text"
+              class="pet-filter"
+              placeholder="Filter pet..."
+              data-target="select-pet-5"
+            >
+            <select id="select-pet-5" name="pet5">
+              <option value="">-- Select a pet --</option>
+              {% for pet in pets %}
+                <option value="{{ pet.id }}">{{ pet.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="optimize-btn" class="btn-primary">
+            Optimize Team
+          </button>
+        </div>
+      </form>
+
+      <div class="results-card">
+        <div class="results-header">
+          <h2>Recommendations</h2>
+          <span>API: /api/team/optimize</span>
+        </div>
+        <pre id="results"></pre>
+      </div>
     </div>
-
-    <button type="button" id="optimize-btn">Optimize Team</button>
-  </form>
-
-  <h2>Recommendations</h2>
-  <pre id="results"></pre>
+  </div>
 
   <script>
-    // --- Filter logic for all 5 selects ---
     document.addEventListener('DOMContentLoaded', () => {
+      // Filter logic for all selects
       document.querySelectorAll('.pet-filter').forEach(input => {
         const targetId = input.dataset.target;
         const select = document.getElementById(targetId);
         if (!select) return;
 
-        // Cache original options
         const allOptions = Array.from(select.options);
 
         input.addEventListener('input', () => {
           const term = input.value.toLowerCase().trim();
-          // Clear current options
           select.innerHTML = '';
           let toShow;
 
           if (!term) {
-            // Show all original options if filter is empty
             toShow = allOptions;
           } else {
             toShow = allOptions.filter(o =>
-              o.text.toLowerCase().includes(term) || o.value.toLowerCase().includes(term)
+              o.text.toLowerCase().includes(term) ||
+              o.value.toLowerCase().includes(term)
             );
           }
 
@@ -174,7 +350,7 @@
         });
       });
 
-      // --- Example hook-up to your /api/team/optimize endpoint ---
+      // Call /api/team/optimize
       const btn = document.getElementById('optimize-btn');
       const resultsEl = document.getElementById('results');
 
@@ -185,12 +361,9 @@
           document.getElementById('select-pet-3').value,
           document.getElementById('select-pet-4').value,
           document.getElementById('select-pet-5').value
-        ].filter(v => v); // remove empty
+        ].filter(v => v);
 
-        // Build payload; you can adjust to your backend format
-        const payload = {
-          pets: ids.map(id => ({ id }))
-        };
+        const payload = { pets: ids.map(id => ({ id })) };
 
         try {
           const res = await fetch('/api/team/optimize', {
