@@ -46,7 +46,6 @@ function populatePetSelects() {
     const select = document.getElementById(id);
     if (!select) return;
 
-    // Store original options on the element so filters can use them
     select.innerHTML = "";
     const defaultOpt = document.createElement("option");
     defaultOpt.value = "";
@@ -60,7 +59,7 @@ function populatePetSelects() {
       select.appendChild(opt);
     });
 
-    // cache original options
+    // cache original options for filtering
     select._allOptions = Array.from(select.options);
   });
 
@@ -99,8 +98,7 @@ function setupPetFilters() {
 }
 
 /**
- * Instead of "add pet" button, we read the 5 select fields
- * and rebuild selectedPetsSelection from those values.
+ * Build selectedPetsSelection from the 5 dropdown fields.
  */
 function buildSelectedPetsFromFields() {
   selectedPetsSelection = [];
@@ -124,7 +122,7 @@ function buildSelectedPetsFromFields() {
 }
 
 function clearSelectedPets() {
-  // Clear selections in the dropdowns
+  // Clear selections in the dropdowns and filters
   for (let i = 1; i <= 5; i++) {
     const select = document.getElementById(`select-pet-${i}`);
     const filter = document.getElementById(`pet-filter-${i}`);
@@ -135,19 +133,23 @@ function clearSelectedPets() {
   selectedPetsSelection = [];
   renderSelectedPets();
 
-  const resultsEl = document.getElementById("results");
-  resultsEl.innerHTML = "";
+  const attackCard = document.getElementById("attack-card");
+  const tankCard = document.getElementById("tank-card");
+  const utilityCard = document.getElementById("utility-card");
+
+  if (attackCard) attackCard.innerHTML = "";
+  if (tankCard) tankCard.innerHTML = "";
+  if (utilityCard) utilityCard.innerHTML = "";
 }
 
 function removePet(index) {
-  // For now, removing from the pills list just clears the matching select as well.
   const removed = selectedPetsSelection[index];
   selectedPetsSelection.splice(index, 1);
 
   // Clear that pet from any select that currently has it
   for (let i = 1; i <= 5; i++) {
     const select = document.getElementById(`select-pet-${i}`);
-    if (select && select.value === (removed && removed.id)) {
+    if (select && removed && select.value === removed.id) {
       select.value = "";
     }
   }
@@ -377,7 +379,7 @@ function recommendBestiaryUtility(selectedPets, playstyle) {
   const scored = bestiaryUtility.map(trait => {
     let s = 0;
     const tags = trait.tags || [];
-    const c = trait.conditions || {};
+       const c = trait.conditions || {};
 
     if (tags.includes("damage_buff")) s += 10;
     if (tags.includes("tamer_damage_buff")) s += 8;
@@ -402,15 +404,71 @@ function recommendBestiaryUtility(selectedPets, playstyle) {
   return scored;
 }
 
+// Build a 20-point allocation for a scored trait list
+function buildTwentyPointAllocation(scoredTraits) {
+  const allocation = [];
+  let total = 0;
+
+  const ranked = scoredTraits.map(s => {
+    const rank = recommendRank(s.score);
+    return { ...s, rank };
+  });
+
+  ranked.sort((a, b) => b.score - a.score);
+
+  for (const s of ranked) {
+    if (total >= 20) break;
+    const remaining = 20 - total;
+    let points = s.rank;
+
+    if (points > remaining) points = remaining;
+    if (points <= 0) continue;
+
+    allocation.push({
+      name: s.trait.name,
+      description: s.trait.description || "",
+      points
+    });
+    total += points;
+  }
+
+  return allocation;
+}
+
 function runRecommendations() {
   // Build selectedPetsSelection from the 5 dropdowns first
   buildSelectedPetsFromFields();
 
-  const resultsEl = document.getElementById("results");
-  resultsEl.innerHTML = "";
+  const attackCard = document.getElementById("attack-card");
+  const tankCard = document.getElementById("tank-card");
+  const utilityCard = document.getElementById("utility-card");
+
+  if (attackCard) attackCard.innerHTML = "";
+  if (tankCard) tankCard.innerHTML = "";
+  if (utilityCard) utilityCard.innerHTML = "";
 
   if (selectedPetsSelection.length === 0) {
-    resultsEl.textContent = "Select at least one pet.";
+    if (attackCard) {
+      attackCard.innerHTML = `
+        <div class="result-title">Attack</div>
+        <div class="result-subtitle">No team selected</div>
+        <div class="result-points">Pick at least one pet above.</div>
+      `;
+    }
+    if (tankCard) {
+      tankCard.innerHTML = `
+        <div class="result-title">Tank</div>
+        <div class="result-subtitle">No team selected</div>
+        <div class="result-points">Pick at least one pet above.</div>
+      `;
+    }
+    if (utilityCard) {
+      utilityCard.innerHTML = `
+        <div class="result-title">Utility</div>
+        <div class="result-subtitle">No team selected</div>
+        <div class="result-points">Pick at least one pet above.</div>
+      `;
+    }
     return;
   }
 
@@ -418,18 +476,6 @@ function runRecommendations() {
   const selectedPets = selectedPetsSelection
     .map(sel => pets.find(p => p.id === sel.id))
     .filter(Boolean);
-
-  const teamScore = scoreTeam(selectedPets, playstyle);
-  const totalSlotsUsed = selectedPets.reduce(
-    (sum, p) => sum + (p.slots || 0),
-    0
-  );
-
-  const teamRecommendations = recommendTeam(selectedPets, playstyle);
-  const recommendedNames =
-    teamRecommendations.length > 0
-      ? teamRecommendations.map(r => r.pet.name).join(", ")
-      : "No additional pets suggested (team already at or near 5 slots).";
 
   const teamClasses = new Set(selectedPets.map(p => p.class));
   const hasAttack = teamClasses.has("Attack");
@@ -446,101 +492,59 @@ function runRecommendations() {
     ? recommendBestiaryUtility(selectedPets, playstyle)
     : [];
 
-  const teamBlock = document.createElement("div");
-  teamBlock.className = "result-block";
-  const names = selectedPets.map(p => p.name).join(", ");
+  const attackAlloc = buildTwentyPointAllocation(attackSuggestions);
+  const tankAlloc = buildTwentyPointAllocation(tankSuggestions);
+  const utilityAlloc = buildTwentyPointAllocation(utilitySuggestions);
 
-  teamBlock.innerHTML = `
-    <div class="result-title">Selected Team</div>
-    <div class="result-subtitle">${names}</div>
-    <div>Team score: <strong>${teamScore}</strong></div>
-    <div>Slots used: <strong>${totalSlotsUsed} / 5</strong></div>
-    <div style="margin-top:0.5rem;">
-      <strong>Suggested additions:</strong> ${recommendedNames}
-    </div>
-  `;
-  resultsEl.appendChild(teamBlock);
+  const makeCardHtml = (title, suggestions, alloc) => {
+    if (!suggestions || suggestions.length === 0) {
+      return `
+        <div class="result-title">${title}</div>
+        <div class="result-subtitle">No relevant pets in this class</div>
+        <div class="result-points">0 pts allocated</div>
+      `;
+    }
 
-  if (attackSuggestions.length > 0) {
-    const attackBlock = document.createElement("div");
-    attackBlock.className = "result-block";
-    const attackItems = attackSuggestions
-      .slice(0, 5)
-      .map(
-        s => `
-          <li>
-            <strong>${s.trait.name}</strong>
-            (score ${s.score}, <strong>${s.rank} pts</strong>)<br/>
-            <span>${s.trait.description || ""}</span>
-          </li>
-        `
-      )
+    const totalPoints = alloc.reduce((sum, a) => sum + a.points, 0);
+    const items = alloc
+      .map(a => `
+        <li>
+          <strong>${a.name}</strong> &mdash; ${a.points} pts
+        </li>
+      `)
       .join("");
-    attackBlock.innerHTML = `
-      <div class="result-title">Attack Bestiary Suggestions</div>
-      <div class="result-subtitle">Top Attack pages for this team & playstyle</div>
-      <ul>${attackItems}</ul>
+
+    return `
+      <div class="result-title">${title}</div>
+      <div class="result-subtitle">${totalPoints} / 20 pts allocated</div>
+      <div class="result-points">Highest-synergy traits for this team and playstyle.</div>
+      <ul class="result-list">
+        ${items || "<li>No high-synergy traits found.</li>"}
+      </ul>
     `;
-    resultsEl.appendChild(attackBlock);
+  };
+
+  if (attackCard) {
+    attackCard.innerHTML = makeCardHtml("Attack", attackSuggestions, attackAlloc);
   }
-
-  if (tankSuggestions.length > 0) {
-    const tankBlock = document.createElement("div");
-    tankBlock.className = "result-block";
-    const tankItems = tankSuggestions
-      .slice(0, 5)
-      .map(
-        s => `
-          <li>
-            <strong>${s.trait.name}</strong>
-            (score ${s.score}, <strong>${s.rank} pts</strong>)<br/>
-            <span>${s.trait.description || ""}</span>
-          </li>
-        `
-      )
-      .join("");
-    tankBlock.innerHTML = `
-      <div class="result-title">Tank Bestiary Suggestions</div>
-      <div class="result-subtitle">Top Tank pages for this team & playstyle</div>
-      <ul>${tankItems}</ul>
-    `;
-    resultsEl.appendChild(tankBlock);
+  if (tankCard) {
+    tankCard.innerHTML = makeCardHtml("Tank", tankSuggestions, tankAlloc);
   }
-
-  if (utilitySuggestions.length > 0) {
-    const utilityBlock = document.createElement("div");
-    utilityBlock.className = "result-block";
-    const utilityItems = utilitySuggestions
-      .slice(0, 5)
-      .map(
-        s => `
-          <li>
-            <strong>${s.trait.name}</strong>
-            (score ${s.score}, <strong>${s.rank} pts</strong>)<br/>
-            <span>${s.trait.description || ""}</span>
-          </li>
-        `
-      )
-      .join("");
-    utilityBlock.innerHTML = `
-      <div class="result-title">Utility Bestiary Suggestions</div>
-      <div class="result-subtitle">Top Utility pages for this team & playstyle</div>
-      <ul>${utilityItems}</ul>
-    `;
-    resultsEl.appendChild(utilityBlock);
+  if (utilityCard) {
+    utilityCard.innerHTML = makeCardHtml("Utility", utilitySuggestions, utilityAlloc);
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   loadData();
 
-  // clear button (optional)
   const clearBtn = document.getElementById("clear-pets-btn");
   if (clearBtn) {
     clearBtn.addEventListener("click", clearSelectedPets);
   }
 
-  document
-    .getElementById("run-btn")
-    .addEventListener("click", runRecommendations);
+  const runBtn = document.getElementById("run-btn");
+  if (runBtn) {
+    runBtn.addEventListener("click", runRecommendations);
+  }
 });
