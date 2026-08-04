@@ -26,7 +26,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "aegis_imp",
@@ -55,7 +56,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "aegis_leech",
@@ -84,7 +86,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "aegis_minion",
@@ -113,7 +116,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "aegis_mongbat",
@@ -142,7 +146,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "aegis_rat",
@@ -172,7 +177,8 @@
       "disease",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "aegis_scorpion",
@@ -201,7 +207,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "aegis_slime",
@@ -230,7 +237,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "aegis_whelp",
@@ -260,7 +268,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_ape",
@@ -292,7 +301,8 @@
       "frenzy",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_courser",
@@ -321,7 +331,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_dragon",
@@ -353,7 +364,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_drake",
@@ -385,7 +397,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_gorger",
@@ -416,7 +429,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_hunter",
@@ -448,7 +462,8 @@
       "frenzy",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_purger",
@@ -480,7 +495,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_scorpion",
@@ -511,7 +527,8 @@
       "melee",
       "single_target",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_serpent",
@@ -542,7 +559,8 @@
       "melee",
       "single_target",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bloodskipper",
@@ -574,7 +592,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bloodwolf",
@@ -605,7 +624,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bloodworm",
@@ -636,7 +656,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "decaying_dragon",
@@ -667,7 +688,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_blood_purger",
@@ -699,7 +721,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "goretusk",
@@ -728,7 +751,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sinewseeker",
@@ -761,7 +785,8 @@
       "melee",
       "single_target",
       "stealth"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "skulker",
@@ -793,7 +818,8 @@
       "melee",
       "stealth",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "wolfhound",
@@ -823,7 +849,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "acarid",
@@ -852,7 +879,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "air_dragon",
@@ -881,7 +909,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "air_drake",
@@ -910,7 +939,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "arctic_bullvore",
@@ -940,7 +970,8 @@
       "chill",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "barbed_prowler",
@@ -970,7 +1001,70 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "boreal_faerie_wyrm",
+    "name": "Boreal Faerie Wyrm",
+    "dungeon": "Cavernam",
+    "slots": 1,
+    "taming": 110,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 200,
+    "minDmg": 18,
+    "maxDmg": 22,
+    "wrestling": 75,
+    "armor": 50,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.057,
+    "cooldownAbility": "Boreal Breath",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "aoe",
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "boreal_wyrm",
+    "name": "Boreal Wyrm",
+    "dungeon": "Cavernam",
+    "slots": 3,
+    "taming": 120,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 450,
+    "minDmg": 52,
+    "maxDmg": 72,
+    "wrestling": 85,
+    "armor": 50,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.0,
+    "cooldownAbility": "Boreal Breath",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "aoe",
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
   },
   {
     "id": "cave_gorger",
@@ -999,7 +1093,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_frost_scorpion",
@@ -1029,7 +1124,8 @@
       "chill",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "frigid_hornbeast",
@@ -1058,7 +1154,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "lemura",
@@ -1088,7 +1185,8 @@
       "melee",
       "reflect",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "rime_guar",
@@ -1118,7 +1216,8 @@
       "chill",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sabeartooth",
@@ -1148,7 +1247,8 @@
       "chill",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "snowdrift",
@@ -1177,7 +1277,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "white_wyrm",
@@ -1208,7 +1309,8 @@
       "chill",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "white_wyrmling",
@@ -1239,7 +1341,8 @@
       "chill",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "winter_wolf",
@@ -1269,7 +1372,8 @@
       "frenzy",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "anaconda",
@@ -1298,7 +1402,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "ant_lion",
@@ -1327,7 +1432,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "arboreal_wisp",
@@ -1356,7 +1462,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "black_widow",
@@ -1386,7 +1493,8 @@
       "disease",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_black_widow",
@@ -1416,7 +1524,8 @@
       "disease",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_poison_dart_frog",
@@ -1445,7 +1554,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_swamp_slug",
@@ -1475,7 +1585,8 @@
       "aoe",
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_black_widow",
@@ -1505,7 +1616,8 @@
       "disease",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_poison_dart_frog",
@@ -1534,7 +1646,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_swamp_slug",
@@ -1564,7 +1677,8 @@
       "aoe",
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "jaguar",
@@ -1596,7 +1710,8 @@
       "frenzy",
       "melee",
       "stealth"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "muck",
@@ -1625,7 +1740,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "otyugh",
@@ -1655,7 +1771,8 @@
       "aoe",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "silverback",
@@ -1685,7 +1802,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "swamp_dragon",
@@ -1715,7 +1833,8 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "swamp_drake",
@@ -1745,7 +1864,8 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "swamp_spider",
@@ -1774,7 +1894,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bonfire_wisp",
@@ -1803,7 +1924,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bullvore",
@@ -1832,7 +1954,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "embear",
@@ -1862,7 +1985,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "fire_beetle",
@@ -1892,7 +2016,8 @@
       "fire",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "fire_crawler",
@@ -1922,7 +2047,8 @@
       "fire",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "fire_minion",
@@ -1951,7 +2077,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "fire_salamander",
@@ -1981,7 +2108,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "firebat",
@@ -2012,7 +2140,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "flamehound",
@@ -2042,7 +2171,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "hellhound",
@@ -2073,7 +2203,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "molten_mongbat",
@@ -2103,7 +2234,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "searing_bullvore",
@@ -2133,7 +2265,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "searing_imp",
@@ -2162,7 +2295,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "searing_lizard",
@@ -2192,7 +2326,8 @@
       "fire",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "searing_mantis",
@@ -2223,7 +2358,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bogyugh",
@@ -2253,7 +2389,8 @@
       "aoe",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "brasshopper",
@@ -2282,7 +2419,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_crystal_beetle",
@@ -2311,7 +2449,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_dung_beetle",
@@ -2340,7 +2479,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_spitting_viper",
@@ -2371,7 +2511,8 @@
       "melee",
       "poison",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_swamp_beetle",
@@ -2401,7 +2542,8 @@
       "melee",
       "poison",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "gargantua_spider",
@@ -2430,7 +2572,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_chameleon",
@@ -2462,7 +2605,8 @@
       "frenzy",
       "melee",
       "stealth"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_crystal_beetle",
@@ -2491,7 +2635,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_locust",
@@ -2520,7 +2665,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_spitting_viper",
@@ -2551,7 +2697,8 @@
       "melee",
       "poison",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_swamp_beetle",
@@ -2581,7 +2728,8 @@
       "melee",
       "poison",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "glowworm",
@@ -2610,7 +2758,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "jungle_mantis",
@@ -2641,7 +2790,8 @@
       "melee",
       "single_target",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "savage_primordial",
@@ -2670,7 +2820,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "shadow_prowler",
@@ -2700,7 +2851,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "spitting_viper",
@@ -2731,7 +2883,8 @@
       "melee",
       "poison",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sword_spider",
@@ -2760,7 +2913,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "ankheg",
@@ -2790,7 +2944,8 @@
       "melee",
       "poison",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "cave_bear",
@@ -2819,7 +2974,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_trapdoor_spider",
@@ -2850,7 +3006,8 @@
       "melee",
       "stealth",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "devilbat",
@@ -2879,7 +3036,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "dusk_dragon",
@@ -2909,7 +3067,8 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "dusk_drake",
@@ -2939,7 +3098,8 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "earth_dragon",
@@ -2968,7 +3128,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "earth_drake",
@@ -2997,7 +3158,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_trapdoor_spider",
@@ -3028,7 +3190,8 @@
       "melee",
       "stealth",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "rock_guar",
@@ -3057,7 +3220,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "stinger",
@@ -3086,7 +3250,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "trapdoor_spider",
@@ -3117,7 +3282,8 @@
       "melee",
       "stealth",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "volt_wisp",
@@ -3146,7 +3312,8 @@
     "tags": [
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_frog",
@@ -3175,7 +3342,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_bat",
@@ -3206,7 +3374,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_frog",
@@ -3235,7 +3404,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_rat",
@@ -3265,7 +3435,8 @@
       "disease",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_spider",
@@ -3294,7 +3465,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "guar",
@@ -3323,7 +3495,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "mongbat",
@@ -3352,7 +3525,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "adder",
@@ -3381,7 +3555,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "army_ant",
@@ -3410,7 +3585,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "asp",
@@ -3439,7 +3615,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "azure_wyrm",
@@ -3469,7 +3646,8 @@
       "aoe",
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "azure_wyrmling",
@@ -3499,7 +3677,8 @@
       "aoe",
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "chameleon",
@@ -3531,7 +3710,8 @@
       "frenzy",
       "melee",
       "stealth"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "dragon",
@@ -3562,7 +3742,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "dragon_whelp",
@@ -3593,7 +3774,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "drake",
@@ -3624,7 +3806,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "drake_whelp",
@@ -3655,7 +3838,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "eldritch_dragon",
@@ -3685,7 +3869,8 @@
       "aoe",
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "eldritch_drake",
@@ -3715,7 +3900,8 @@
       "aoe",
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "ember_dragon",
@@ -3746,7 +3932,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "ember_drake",
@@ -3777,7 +3964,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "flame_purger",
@@ -3808,7 +3996,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "harvestman",
@@ -3838,7 +4027,8 @@
       "disease",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "komodo",
@@ -3867,7 +4057,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "monitor",
@@ -3896,7 +4087,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "monitor_hatchling",
@@ -3925,7 +4117,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "primordial",
@@ -3955,7 +4148,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "primordial_whelp",
@@ -3985,7 +4179,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "ruby_wyrm",
@@ -4015,7 +4210,8 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "ruby_wyrmling",
@@ -4045,7 +4241,8 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "smoke_dragon",
@@ -4074,7 +4271,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "smoke_drake",
@@ -4103,7 +4301,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "smoke_faerie_dragon",
@@ -4132,7 +4331,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sun_wyrm",
@@ -4162,7 +4362,8 @@
       "aoe",
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sun_wyrmling",
@@ -4192,7 +4393,8 @@
       "aoe",
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "wyvern",
@@ -4221,7 +4423,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "wyvern_hatchling",
@@ -4250,7 +4453,39 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "basilisk",
+    "name": "Basilisk",
+    "dungeon": "Ossuary",
+    "slots": 2,
+    "taming": 120,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 300,
+    "minDmg": 28,
+    "maxDmg": 34,
+    "wrestling": 75,
+    "armor": 50,
+    "magicResist": 50,
+    "poisonResist": "33%",
+    "specialResist": "33%",
+    "poisonLevel": "Lethal",
+    "poisonSkill": 30,
+    "stealth": false,
+    "underdogScalar": 1.0,
+    "cooldownAbility": "Basilisk Breath",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "aoe",
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
   },
   {
     "id": "black_cat",
@@ -4279,7 +4514,38 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "brood_beetle",
+    "name": "Brood Beetle",
+    "dungeon": "Ossuary",
+    "slots": 2,
+    "taming": 110,
+    "class": "Tank",
+    "combatType": "Melee",
+    "hits": 300,
+    "minDmg": 34,
+    "maxDmg": 40,
+    "wrestling": 85,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": "33%",
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.057,
+    "cooldownAbility": null,
+    "passiveAbility": null,
+    "innateAbility": "Beetlemania",
+    "mule": false,
+    "tags": [
+      "melee",
+      "tank"
+    ],
+    "imageUrl": null
   },
   {
     "id": "cave_bat",
@@ -4310,7 +4576,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_blazing_beetle",
@@ -4340,7 +4607,8 @@
       "fire",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_sandroach",
@@ -4369,7 +4637,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_searing_scorpion",
@@ -4399,7 +4668,8 @@
       "fire",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "cryptwing",
@@ -4429,7 +4699,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "fiery_leaper",
@@ -4460,7 +4731,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "fire_ant",
@@ -4490,7 +4762,70 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "firebite_cobra",
+    "name": "Firebite Cobra",
+    "dungeon": "Ossuary",
+    "slots": 3,
+    "taming": 115,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 325,
+    "minDmg": 50,
+    "maxDmg": 60,
+    "wrestling": 90,
+    "armor": 25,
+    "magicResist": 50,
+    "poisonResist": "33%",
+    "specialResist": null,
+    "poisonLevel": "Lethal",
+    "poisonSkill": 40,
+    "stealth": false,
+    "underdogScalar": 1.028,
+    "cooldownAbility": "Firebite",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "fire",
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "firebite_scorpion",
+    "name": "Firebite Scorpion",
+    "dungeon": "Ossuary",
+    "slots": 1,
+    "taming": 115,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 175,
+    "minDmg": 14,
+    "maxDmg": 18,
+    "wrestling": 75,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": "33%",
+    "specialResist": null,
+    "poisonLevel": "Greater",
+    "poisonSkill": 20,
+    "stealth": false,
+    "underdogScalar": 1.028,
+    "cooldownAbility": "Firebite",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "fire",
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_sandroach",
@@ -4519,7 +4854,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_scorpion",
@@ -4548,7 +4884,68 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "jade_androsphinx",
+    "name": "Jade Androsphinx",
+    "dungeon": "Ossuary",
+    "slots": 2,
+    "taming": 120,
+    "class": "Tank",
+    "combatType": "Melee",
+    "hits": 300,
+    "minDmg": 32,
+    "maxDmg": 36,
+    "wrestling": 80,
+    "armor": 75,
+    "magicResist": 100,
+    "poisonResist": "33%",
+    "specialResist": "33%",
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.0,
+    "cooldownAbility": "Reactive Armor",
+    "passiveAbility": "Resonate",
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "melee",
+      "tank"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "jade_scorpion",
+    "name": "Jade Scorpion",
+    "dungeon": "Ossuary",
+    "slots": 1,
+    "taming": 120,
+    "class": "Tank",
+    "combatType": "Melee",
+    "hits": 200,
+    "minDmg": 14,
+    "maxDmg": 18,
+    "wrestling": 70,
+    "armor": 75,
+    "magicResist": 100,
+    "poisonResist": "33%",
+    "specialResist": null,
+    "poisonLevel": "Deadly",
+    "poisonSkill": 20,
+    "stealth": false,
+    "underdogScalar": 1.0,
+    "cooldownAbility": null,
+    "passiveAbility": "Resonate",
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "melee",
+      "tank"
+    ],
+    "imageUrl": null
   },
   {
     "id": "nightmare",
@@ -4577,7 +4974,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "phoenix",
@@ -4607,7 +5005,38 @@
       "aoe",
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "pocket_beetle",
+    "name": "Pocket Beetle",
+    "dungeon": "Ossuary",
+    "slots": 1,
+    "taming": 110,
+    "class": "Tank",
+    "combatType": "Melee",
+    "hits": 200,
+    "minDmg": 16,
+    "maxDmg": 20,
+    "wrestling": 75,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": "33%",
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.057,
+    "cooldownAbility": null,
+    "passiveAbility": null,
+    "innateAbility": "Beetlemania",
+    "mule": false,
+    "tags": [
+      "melee",
+      "tank"
+    ],
+    "imageUrl": null
   },
   {
     "id": "radiant_burrowbug",
@@ -4637,7 +5066,8 @@
       "attack",
       "fire",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sand_crawler",
@@ -4666,7 +5096,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sand_muck",
@@ -4695,7 +5126,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "scarab",
@@ -4725,7 +5157,8 @@
       "melee",
       "reflect",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "scorpion",
@@ -4754,7 +5187,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "skeletal_dragon",
@@ -4784,7 +5218,38 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "spectraldile",
+    "name": "Spectraldile",
+    "dungeon": "Ossuary",
+    "slots": 3,
+    "taming": 120,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 425,
+    "minDmg": 48,
+    "maxDmg": 60,
+    "wrestling": 95,
+    "armor": 50,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.0,
+    "cooldownAbility": "Crush",
+    "passiveAbility": null,
+    "innateAbility": "Elusive Form / Shadowstrikes",
+    "mule": false,
+    "tags": [
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
   },
   {
     "id": "sphinx",
@@ -4814,7 +5279,8 @@
       "melee",
       "reflect",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "temple_guardian",
@@ -4846,7 +5312,8 @@
       "melee",
       "reflect",
       "stealth"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "deep_crawler",
@@ -4875,7 +5342,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "drowned_dragon",
@@ -4905,7 +5373,8 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "fortress_beetle",
@@ -4934,7 +5403,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "husk_crab",
@@ -4963,7 +5433,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "minion",
@@ -4992,7 +5463,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "reef_serpent",
@@ -5021,7 +5493,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "shallow_water",
@@ -5050,7 +5523,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "tidal_mantis",
@@ -5079,7 +5553,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "water_dragon",
@@ -5109,7 +5584,8 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "water_drake",
@@ -5139,7 +5615,8 @@
       "aoe",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "blood_mephit",
@@ -5168,7 +5645,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "corrupted_hornbeast",
@@ -5197,7 +5675,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "earth_mephit",
@@ -5226,7 +5705,8 @@
     "tags": [
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "eldritch_mephit",
@@ -5255,7 +5735,8 @@
     "tags": [
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "fire_mephit",
@@ -5284,7 +5765,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "frost_mephit",
@@ -5314,7 +5796,8 @@
       "chill",
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "gravebug",
@@ -5344,7 +5827,8 @@
       "disease",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "poison_mephit",
@@ -5374,7 +5858,214 @@
       "poison",
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "air_elemental",
+    "name": "Air Elemental",
+    "dungeon": "Summoned",
+    "slots": 2,
+    "taming": 0,
+    "class": null,
+    "combatType": "Melee",
+    "hits": 500,
+    "minDmg": 30,
+    "maxDmg": 40,
+    "wrestling": 110,
+    "armor": 25,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.685,
+    "cooldownAbility": null,
+    "passiveAbility": "Bleed",
+    "innateAbility": "Cleave",
+    "mule": false,
+    "tags": [
+      "bleed",
+      "melee",
+      "single_target"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "blade_spirit",
+    "name": "Blade Spirit",
+    "dungeon": "Summoned",
+    "slots": 1,
+    "taming": 0,
+    "class": null,
+    "combatType": "Melee",
+    "hits": 300,
+    "minDmg": 18,
+    "maxDmg": 22,
+    "wrestling": 90,
+    "armor": 50,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.685,
+    "cooldownAbility": null,
+    "passiveAbility": null,
+    "innateAbility": "Diversion",
+    "mule": false,
+    "tags": [
+      "melee"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "daemon",
+    "name": "Daemon",
+    "dungeon": "Summoned",
+    "slots": 2,
+    "taming": 0,
+    "class": null,
+    "combatType": "Spell",
+    "hits": 600,
+    "minDmg": 24,
+    "maxDmg": 30,
+    "wrestling": 95,
+    "armor": 50,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.685,
+    "cooldownAbility": null,
+    "passiveAbility": null,
+    "innateAbility": "Fury",
+    "mule": false,
+    "tags": [
+      "spell"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "earth_elemental",
+    "name": "Earth Elemental",
+    "dungeon": "Summoned",
+    "slots": 2,
+    "taming": 0,
+    "class": null,
+    "combatType": "Melee",
+    "hits": 600,
+    "minDmg": 40,
+    "maxDmg": 50,
+    "wrestling": 95,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": "33%",
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.685,
+    "cooldownAbility": null,
+    "passiveAbility": null,
+    "innateAbility": "Rooted",
+    "mule": false,
+    "tags": [
+      "melee"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "energy_vortex",
+    "name": "Energy Vortex",
+    "dungeon": "Summoned",
+    "slots": 2,
+    "taming": 0,
+    "class": null,
+    "combatType": "Melee",
+    "hits": 600,
+    "minDmg": 36,
+    "maxDmg": 42,
+    "wrestling": 105,
+    "armor": 25,
+    "magicResist": 100,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.685,
+    "cooldownAbility": null,
+    "passiveAbility": null,
+    "innateAbility": "Discharge",
+    "mule": false,
+    "tags": [
+      "melee"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "fire_elemental",
+    "name": "Fire Elemental",
+    "dungeon": "Summoned",
+    "slots": 2,
+    "taming": 0,
+    "class": null,
+    "combatType": "Spell",
+    "hits": 400,
+    "minDmg": 28,
+    "maxDmg": 34,
+    "wrestling": 85,
+    "armor": 25,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.685,
+    "cooldownAbility": "Epic Barrage",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "aoe",
+      "spell"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "water_elemental",
+    "name": "Water Elemental",
+    "dungeon": "Summoned",
+    "slots": 2,
+    "taming": 0,
+    "class": null,
+    "combatType": "Spell",
+    "hits": 600,
+    "minDmg": 24,
+    "maxDmg": 30,
+    "wrestling": 100,
+    "armor": 25,
+    "magicResist": 150,
+    "poisonResist": "66%",
+    "specialResist": "33%",
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.685,
+    "cooldownAbility": "Mirror",
+    "passiveAbility": null,
+    "innateAbility": "Elusive Form",
+    "mule": false,
+    "tags": [
+      "spell"
+    ],
+    "imageUrl": null
   },
   {
     "id": "blightmare",
@@ -5403,7 +6094,8 @@
     "tags": [
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "carrion_beetle",
@@ -5433,7 +6125,8 @@
       "disease",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "corpse_eater",
@@ -5463,7 +6156,8 @@
       "disease",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "corpse_purger",
@@ -5494,7 +6188,8 @@
       "disease",
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "darkscale",
@@ -5523,7 +6218,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "devourer_beetle",
@@ -5553,7 +6249,8 @@
       "disease",
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "entozoon",
@@ -5582,7 +6279,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "familiar",
@@ -5611,7 +6309,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "imp",
@@ -5640,7 +6339,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "incubus",
@@ -5669,7 +6369,8 @@
     "tags": [
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "manticore",
@@ -5699,7 +6400,8 @@
       "melee",
       "poison",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "nightstalker",
@@ -5731,7 +6433,8 @@
       "frenzy",
       "melee",
       "stealth"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "shade_wolf",
@@ -5763,7 +6466,8 @@
       "frenzy",
       "melee",
       "stealth"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "shadow_minion",
@@ -5792,7 +6496,8 @@
     "tags": [
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "vampire_bat",
@@ -5823,7 +6528,8 @@
       "bleed",
       "melee",
       "single_target"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "void_slime",
@@ -5853,7 +6559,310 @@
       "aoe",
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "aquamarine_smallshell",
+    "name": "Aquamarine Smallshell",
+    "dungeon": "Tidal Tomb",
+    "slots": 1,
+    "taming": 100,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 175,
+    "minDmg": 20,
+    "maxDmg": 24,
+    "wrestling": 75,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.114,
+    "cooldownAbility": "Water Claw",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "biolumen_shellpod",
+    "name": "Biolumen Shellpod",
+    "dungeon": "Tidal Tomb",
+    "slots": 2,
+    "taming": 115,
+    "class": "Attack",
+    "combatType": "Melee",
+    "hits": 325,
+    "minDmg": 34,
+    "maxDmg": 40,
+    "wrestling": 80,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.028,
+    "cooldownAbility": "Biolumen Barrage",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "aoe",
+      "attack",
+      "melee"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "colossal_pincer_crab",
+    "name": "Colossal Pincer Crab",
+    "dungeon": "Tidal Tomb",
+    "slots": 3,
+    "taming": 120,
+    "class": "Tank",
+    "combatType": "Melee",
+    "hits": 450,
+    "minDmg": 48,
+    "maxDmg": 64,
+    "wrestling": 85,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": "33%",
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.0,
+    "cooldownAbility": null,
+    "passiveAbility": "Pinch",
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "melee",
+      "tank"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "dungeon_nest_crab",
+    "name": "Dungeon-Nest Crab",
+    "dungeon": "Tidal Tomb",
+    "slots": 1,
+    "taming": 105,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 175,
+    "minDmg": 20,
+    "maxDmg": 24,
+    "wrestling": 80,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.085,
+    "cooldownAbility": "Dig",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "giant_pincer_crab",
+    "name": "Giant Pincer Crab",
+    "dungeon": "Tidal Tomb",
+    "slots": 2,
+    "taming": 110,
+    "class": "Tank",
+    "combatType": "Melee",
+    "hits": 300,
+    "minDmg": 32,
+    "maxDmg": 38,
+    "wrestling": 80,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": "33%",
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.057,
+    "cooldownAbility": null,
+    "passiveAbility": "Pinch",
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "melee",
+      "tank"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "lighthouse_shellpod",
+    "name": "Lighthouse Shellpod",
+    "dungeon": "Tidal Tomb",
+    "slots": 2,
+    "taming": 115,
+    "class": "Attack",
+    "combatType": "Melee",
+    "hits": 325,
+    "minDmg": 34,
+    "maxDmg": 40,
+    "wrestling": 80,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.028,
+    "cooldownAbility": "Light Barrage",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "aoe",
+      "attack",
+      "melee"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "oozing_noughtilus",
+    "name": "Oozing Noughtilus",
+    "dungeon": "Tidal Tomb",
+    "slots": 1,
+    "taming": 110,
+    "class": "Attack",
+    "combatType": "Melee",
+    "hits": 200,
+    "minDmg": 18,
+    "maxDmg": 22,
+    "wrestling": 75,
+    "armor": 50,
+    "magicResist": 50,
+    "poisonResist": "33%",
+    "specialResist": "33%",
+    "poisonLevel": "Greater",
+    "poisonSkill": 20,
+    "stealth": false,
+    "underdogScalar": 1.057,
+    "cooldownAbility": "Ooze Aura",
+    "passiveAbility": "Shell",
+    "innateAbility": "Mule",
+    "mule": true,
+    "tags": [
+      "attack",
+      "melee"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "ruby_smallshell",
+    "name": "Ruby Smallshell",
+    "dungeon": "Tidal Tomb",
+    "slots": 1,
+    "taming": 100,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 175,
+    "minDmg": 20,
+    "maxDmg": 24,
+    "wrestling": 75,
+    "armor": 75,
+    "magicResist": 50,
+    "poisonResist": null,
+    "specialResist": null,
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.114,
+    "cooldownAbility": "Pierce Claw",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "singing_noughtilus",
+    "name": "Singing Noughtilus",
+    "dungeon": "Tidal Tomb",
+    "slots": 1,
+    "taming": 110,
+    "class": "Attack",
+    "combatType": "Melee",
+    "hits": 200,
+    "minDmg": 20,
+    "maxDmg": 24,
+    "wrestling": 80,
+    "armor": 50,
+    "magicResist": 50,
+    "poisonResist": "33%",
+    "specialResist": "33%",
+    "poisonLevel": null,
+    "poisonSkill": null,
+    "stealth": false,
+    "underdogScalar": 1.057,
+    "cooldownAbility": "Sing",
+    "passiveAbility": "Shell",
+    "innateAbility": "Mule",
+    "mule": true,
+    "tags": [
+      "attack",
+      "melee"
+    ],
+    "imageUrl": null
+  },
+  {
+    "id": "tidal_krait",
+    "name": "Tidal Krait",
+    "dungeon": "Tidal Tomb",
+    "slots": 4,
+    "taming": 120,
+    "class": "Utility",
+    "combatType": "Melee",
+    "hits": 400,
+    "minDmg": 50,
+    "maxDmg": 70,
+    "wrestling": 100,
+    "armor": 50,
+    "magicResist": 50,
+    "poisonResist": "33%",
+    "specialResist": null,
+    "poisonLevel": "Deadly",
+    "poisonSkill": 50,
+    "stealth": false,
+    "underdogScalar": 1.0,
+    "cooldownAbility": "Choke",
+    "passiveAbility": null,
+    "innateAbility": null,
+    "mule": false,
+    "tags": [
+      "melee",
+      "utility"
+    ],
+    "imageUrl": null
   },
   {
     "id": "bird",
@@ -5882,7 +6891,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bird_of_paradise",
@@ -5911,7 +6921,8 @@
     "tags": [
       "spell",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bison",
@@ -5940,7 +6951,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "black_bear",
@@ -5969,7 +6981,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bonehorn",
@@ -5998,7 +7011,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "brown_bear",
@@ -6027,7 +7041,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "bull",
@@ -6056,7 +7071,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "cat",
@@ -6085,7 +7101,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "chicken",
@@ -6114,7 +7131,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_boa",
@@ -6143,7 +7161,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_huntsman",
@@ -6172,7 +7191,8 @@
     "tags": [
       "melee",
       "utility"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "colossal_strider",
@@ -6201,7 +7221,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "cougar",
@@ -6231,7 +7252,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "cow",
@@ -6260,7 +7282,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "desert_ostard",
@@ -6290,7 +7313,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "dog",
@@ -6319,7 +7343,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "eagle",
@@ -6348,7 +7373,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "elk",
@@ -6377,7 +7403,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "forest_ostard",
@@ -6406,7 +7433,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "frenzied_ostard",
@@ -6436,7 +7464,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "giant_strider",
@@ -6465,7 +7494,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "goat",
@@ -6494,7 +7524,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "great_hart",
@@ -6523,7 +7554,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "grizzly_bear",
@@ -6552,7 +7584,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "hind",
@@ -6581,7 +7614,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "horse",
@@ -6610,7 +7644,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "llama",
@@ -6639,7 +7674,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "pig",
@@ -6668,7 +7704,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "polar_bear",
@@ -6697,7 +7734,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sand_crab",
@@ -6726,7 +7764,8 @@
     "tags": [
       "melee",
       "tank"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sandstalker",
@@ -6757,7 +7796,8 @@
       "backstab",
       "melee",
       "stealth"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sheep",
@@ -6786,7 +7826,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "sunscale",
@@ -6816,7 +7857,8 @@
       "aoe",
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "tundra_ostard",
@@ -6846,7 +7888,8 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "walrus",
@@ -6875,7 +7918,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "warpig",
@@ -6904,7 +7948,8 @@
     "tags": [
       "attack",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "wisp",
@@ -6933,7 +7978,8 @@
     "tags": [
       "attack",
       "spell"
-    ]
+    ],
+    "imageUrl": null
   },
   {
     "id": "wolf",
@@ -6963,6 +8009,7 @@
       "attack",
       "frenzy",
       "melee"
-    ]
+    ],
+    "imageUrl": null
   }
 ]
