@@ -24,7 +24,7 @@ async function loadData() {
   const utilityRes = await fetch("bestiary_utility.json?cachebust=" + Date.now());
   bestiaryUtility = await utilityRes.json();
 
-  populatePetSelect();
+  populatePetSelects();
 }
 
 /**
