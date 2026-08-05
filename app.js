@@ -12,19 +12,19 @@ function recommendRank(score) {
 }
 
 async function loadData() {
-  const petsRes = await fetch("pets.json");
+  const petsRes = await fetch("pets.json?cachebust=" + Date.now());
   pets = await petsRes.json();
 
-  const attackRes = await fetch("bestiary_attack.json");
+  const attackRes = await fetch("bestiary_attack.json?cachebust=" + Date.now());
   bestiaryAttack = await attackRes.json();
 
-  const tankRes = await fetch("bestiary_tank.json");
+  const tankRes = await fetch("bestiary_tank.json?cachebust=" + Date.now());
   bestiaryTank = await tankRes.json();
 
-  const utilityRes = await fetch("bestiary_utility.json");
+  const utilityRes = await fetch("bestiary_utility.json?cachebust=" + Date.now());
   bestiaryUtility = await utilityRes.json();
 
-  populatePetSelects();
+  populatePetSelect();
 }
 
 /**
