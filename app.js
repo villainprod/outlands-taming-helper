@@ -19,18 +19,26 @@ async function fetchJson(url) {
 
 async function loadData() {
   try {
-    [pets, bestiaryAttack, bestiaryTank, bestiaryUtility] = await Promise.all([
-      fetchJson("pets.json"),
-      fetchJson("bestiary_attack.json"),
-      fetchJson("bestiary_tank.json"),
-      fetchJson("bestiary_utility.json")
-    ]);
+    const petsRes = await fetch("pets.json?cachebust=" + Date.now());
+    console.log("pets.json status", petsRes.status);
+    pets = await petsRes.json();
+    console.log("pets length", pets.length);
+
+    const attackRes = await fetch("bestiary_attack.json?cachebust=" + Date.now());
+    bestiaryAttack = await attackRes.json();
+    console.log("bestiary_attack length", bestiaryAttack.length);
+
+    const tankRes = await fetch("bestiary_tank.json?cachebust=" + Date.now());
+    bestiaryTank = await tankRes.json();
+    console.log("bestiary_tank length", bestiaryTank.length);
+
+    const utilityRes = await fetch("bestiary_utility.json?cachebust=" + Date.now());
+    bestiaryUtility = await utilityRes.json();
+    console.log("bestiary_utility length", bestiaryUtility.length);
 
     populatePetSelects();
   } catch (err) {
-    console.error("Failed to load data:", err);
-    const container = document.getElementById("selected-pets");
-    if (container) container.innerHTML = `<div class="error">Failed to load data.</div>`;
+    console.error("loadData error", err);
   }
 }
 
